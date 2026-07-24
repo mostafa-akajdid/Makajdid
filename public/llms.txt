@@ -1,0 +1,44 @@
+# Mostafa Akajdid — Full-Stack Developer Portfolio
+
+## About
+Mostafa Akajdid is a full-stack developer based in Casablanca, Morocco. He specializes in React, Next.js, TypeScript, Spring Boot, and PostgreSQL. He is an Oracle Certified Java SE 17 Developer (OCP).
+
+## Skills
+- Frontend: React, Next.js, TypeScript, Tailwind CSS, shadcn/ui, Chakra UI, Material-UI
+- Backend: Spring Boot, Express.js, Node.js, Java 17
+- Databases: PostgreSQL, MySQL
+- DevOps: Docker, Git, GitHub Actions (CI/CD)
+- Auth: JWT, NextAuth.js, RBAC
+- Methods: Agile/Scrum, code reviews
+
+## Services
+- Web designing and UI/UX
+- Full-stack web development (React/Next.js + Spring Boot)
+- Responsive and mobile-first design
+- REST API design and integration
+- Database modeling and optimization
+
+## Experience
+- Full-Stack Developer at Dynamic Impact (Aug 2025 – Feb 2026)
+- Front-End Developer at Digitalia Solutions (Apr 2025 – Aug 2025)
+- Full-Stack Web Developer at Ocean Connecting (Aug 2024 – Mar 2025)
+- Web & Marketing Developer at Optisent (Sep 2023 – Jun 2024)
+
+## Education
+- Full Stack Formation (Spring Boot & React) — Coding Tech, Casablanca, 2025
+- Technicien Specialise en Developpement Informatique — ISTA TADDART, Agadir, 2020–2023
+
+## Contact
+- Email: mostafaakajdid6@gmail.com
+- Phone: +212 7 62 54 40 11
+- Location: Casablanca, Morocco
+- LinkedIn: https://www.linkedin.com/in/mostafa-akajdid/
+- GitHub: https://github.com/akajdid-mostafa
+
+## Projects
+- Real Estate Platform — Next.js, Chakra UI, Prisma, PostgreSQL
+- Glass Ocean — Next.js, Material-UI, GSAP, glass morphism design
+- Piolec — Next.js, Tailwind CSS, electrical products platform
+- Monpatient — Next.js, Redux Toolkit, Node.js, Fastify, healthcare SaaS
+- StoryCareer — Next.js, Node.js, Tailwind CSS, Clerk, career platform
+- Gemini — React, Gemini API, generative AI app
