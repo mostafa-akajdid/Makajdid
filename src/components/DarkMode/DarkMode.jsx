@@ -1,33 +1,57 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
-import Sun from "./Sun.svg";
-import Moon from "./Moon.svg";
+import { useState, useEffect, useCallback } from "react";
+import { FiSun, FiMoon } from "react-icons/fi";
 import "./DarkMode.css";
 
+const STORAGE_KEY = "theme";
+
+const getInitialTheme = () => {
+  const stored = localStorage.getItem(STORAGE_KEY);
+  if (stored === "dark" || stored === "light") return stored;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
 const DarkMode = () => {
-  const setDarkMode = () => {
-    document.querySelector("body").setAttribute("data-theme", "dark");
-  };
-  const setLightMode = () => {
-    document.querySelector("body").setAttribute("data-theme", "light");
-  };
-  const toggleTheme = (e) => {
-    if (e.target.checked) setDarkMode();
-    else setLightMode();
-  };
+  const [dark, setDark] = useState(getInitialTheme);
+
+  useEffect(() => {
+    document.body.setAttribute("data-theme", dark);
+    localStorage.setItem(STORAGE_KEY, dark);
+  }, [dark]);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    const handler = (e) => {
+      if (!localStorage.getItem(STORAGE_KEY)) {
+        setDark(e.matches ? "dark" : "light");
+      }
+    };
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  const toggle = useCallback(() => {
+    setDark((prev) => (prev === "dark" ? "light" : "dark"));
+  }, []);
+
   return (
-    <div className="dark_mode">
-      <input
-        className="dark_mode_input"
-        type="checkbox"
-        id="darkmode-toggle"
-        onChange={toggleTheme}
+    <button
+      className="theme-toggle"
+      onClick={toggle}
+      role="switch"
+      aria-checked={dark === "dark"}
+      aria-label={`Switch to ${dark === "dark" ? "light" : "dark"} mode`}
+    >
+      <FiSun
+        className={`theme-toggle__icon${dark !== "dark" ? " theme-toggle__icon--visible" : ""}`}
+        size={14}
       />
-      <label className="dark_mode_label" htmlFor="darkmode-toggle">
-        <img src={Sun} alt="Light mode" className="sun" />
-        <img src={Moon} alt="Dark mode" className="moon" />
-      </label>
-    </div>
+      <FiMoon
+        className={`theme-toggle__icon${dark === "dark" ? " theme-toggle__icon--visible" : ""}`}
+        size={14}
+      />
+    </button>
   );
 };
 
