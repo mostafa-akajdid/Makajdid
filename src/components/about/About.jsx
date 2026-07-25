@@ -1,40 +1,66 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
 import "./about.css";
-import { files, resume, img2 } from "../../assets/assets";
+import { about } from "../../assets/assets";
+
+const HEADING_OPTIONS = [
+  "Software should feel effortless.",
+  "Building products people enjoy using.",
+  "I solve problems, not just write code.",
+  "Good design is invisible.",
+  "Every pixel has a purpose.",
+];
 
 const About = () => {
   return (
-    <section className="about section" id="about">
-      <h2 className="section__title">About Me</h2>
-      <span className="section__subtitle">My introduction</span>
+    <section className="about" id="about">
+      <div className="about__container">
+        <span className="about__label">About</span>
 
-      <div className="about__container container grid">
-        <img src={img2} alt="Mostafa Akajdid portrait" className="about__img" loading="lazy" decoding="async" />
-        <div className="about__data">
-          <p className="about__description">
-            Oracle Certified Professional, Java SE 17 Developer (2025).
-            Full-stack profile: React, Next.js, TypeScript, Tailwind CSS,
-            shadcn/ui on the front; Spring Boot, Express.js, and PostgreSQL on
-            the back; JWT and NextAuth for auth.
-            <br></br>
-            <br></br>
-            I design and integrate REST APIs, model and query relational
-            databases, and deliver features in production within Agile/Scrum
-            teams—with code reviews and solid engineering practices.
-            <br></br>
-            <br></br>
-            Languages: French (professional), English (intermediate).
-          </p>
+        <h2 className="about__heading">{HEADING_OPTIONS[0]}</h2>
 
-          <a
-            download="Mostafa Akajdid CV.pdf"
-            href={resume}
-            className="button button--flex"
-          >
-            Download CV
-            <img src={files} alt="Download CV" className="button__icon" />
-          </a>
+        <p className="about__quote">
+          &ldquo;I don&apos;t just build interfaces. I remove the friction
+          between people and what they&apos;re trying to accomplish.&rdquo;
+        </p>
+
+        <div className="about__body">
+          <img
+            src={about}
+            alt="Mostafa Akajdid"
+            className="about__portrait"
+            width="280"
+            height="373"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <div className="about__narrative">
+            <p className="about__text">
+              I&apos;m a full-stack developer who believes software should serve
+              people, not the other way around. Based in Morocco, I&apos;ve spent
+              years learning what makes digital products actually work — not just
+              compile.
+            </p>
+            <p className="about__text">
+              I start with the person using the product, not the technology
+              behind it. Every decision — from layout to API design — is
+              measured against one question: does this make the experience
+              simpler?
+            </p>
+            <p className="about__text">
+              You can expect clear communication, thoughtful code, and a genuine
+              interest in solving the right problem. I work best with people who
+              care about quality and aren&apos;t afraid to iterate.
+            </p>
+
+            <div className="about__actions">
+              <a href="#contact" className="about__cta">
+                Get in touch
+                <span className="about__cta-arrow" aria-hidden="true">
+                  &rarr;
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

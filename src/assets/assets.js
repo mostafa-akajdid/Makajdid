@@ -14,7 +14,7 @@ import Scompo from "./skills/styled-components.svg";
 import Tailwind from "./skills/tailwindcss.svg";
 import Mui from "./skills/material-ui.svg";
 import git from "./skills/git.svg";
-import img2 from "./img2.jpg";
+import about from "./about.png";
 import profile from "./mostafa.webp";
 import responsive from "./smartphone-call.png";
 import resume from "./mostafa-akajdid-cv.pdf";
@@ -28,7 +28,7 @@ export {
   web,
   responsive,
   resume,
-  img2,
+  about,
   Html,
   Css,
   Js,
