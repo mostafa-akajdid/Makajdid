@@ -1,0 +1,177 @@
+/*=============== PROJECTS PAGE — EDITORIAL ===============*/
+
+/* Hero */
+.projects-hero {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 10rem 1.5rem 6rem;
+  text-align: center;
+}
+
+.projects-hero__title {
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  font-weight: var(--font-semi-bold);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--title-color);
+  margin-bottom: 1.75rem;
+}
+
+.projects-hero__description {
+  font-size: clamp(0.95rem, 1.5vw, 1.125rem);
+  line-height: 1.7;
+  color: var(--text-color);
+  max-width: 540px;
+  margin: 0 auto 2.5rem;
+}
+
+.projects-hero__counter {
+  display: inline-block;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+/* Case Studies wrapper spacing */
+.projects-hero + section {
+  padding-top: 0;
+}
+
+/* CTA */
+.projects-cta {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 9.5rem 1.5rem 8rem;
+  text-align: center;
+}
+
+.projects-cta__label {
+  display: inline-block;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-color);
+  opacity: 0.5;
+  margin-bottom: 1.75rem;
+}
+
+.projects-cta__title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: var(--font-semi-bold);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--title-color);
+  margin-bottom: 1.5rem;
+}
+
+.projects-cta__description {
+  font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: 3rem;
+}
+
+.projects-cta__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  text-decoration: none;
+  padding: 0.85rem 1.75rem;
+  border: 1px solid var(--title-color);
+  border-radius: 999px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.projects-cta__link:hover {
+  background-color: var(--title-color);
+  color: var(--container-color);
+}
+
+.projects-cta__link:focus-visible {
+  outline: 1px solid var(--title-color);
+  outline-offset: 4px;
+}
+
+.projects-cta__arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.projects-cta__link:hover .projects-cta__arrow {
+  transform: translateX(3px);
+}
+
+/* Focus — Cards */
+.case-study-card:focus-visible {
+  outline: 1px solid var(--title-color);
+  outline-offset: 5px;
+  border-radius: 1rem;
+}
+
+/*=============== RESPONSIVE ===============*/
+
+@media screen and (max-width: 992px) {
+  .projects-hero {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+  }
+
+  .projects-cta {
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects-hero {
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+
+  .projects-hero__description {
+    margin-bottom: 2rem;
+  }
+
+  .projects-cta {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .projects-hero {
+    padding-top: 6rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .projects-hero__title {
+    margin-bottom: 1.5rem;
+  }
+
+  .projects-cta {
+    padding: 5rem 1.25rem 4rem;
+  }
+
+  .projects-cta__description br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .projects-hero {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  .projects-cta {
+    padding: 4rem 1rem 3.5rem;
+  }
+}

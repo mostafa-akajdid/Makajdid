@@ -1,0 +1,35 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.not-found__title {
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: var(--font-semi-bold);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--title-color);
+  margin-bottom: 1.5rem;
+}
+
+.not-found__text {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  margin-bottom: 3rem;
+}
+
+.not-found__link {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.not-found__link:hover {
+  opacity: 1;
+}

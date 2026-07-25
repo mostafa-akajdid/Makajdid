@@ -7,3 +7,11 @@ import StoryCareer from "./Project/StoryCareer.png";
 
 
 export {gemini,realstate,glassOcean,piolecImage,monpatient,StoryCareer}
+export const projectImages = {
+    gemini,
+    realstate,
+    glassOcean,
+    piolecImage,
+    monpatient,
+    StoryCareer,
+  };

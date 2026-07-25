@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { send } from "../../assets/assets";
+import { useState, useCallback } from "react";
+import { profile } from "../../assets/assets";
 import "./contact.css";
 
 const Contact = () => {
@@ -8,218 +8,216 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [showPopup, setShowPopup] = useState(false); // State to control popup visibility
-  const [errors, setErrors] = useState({}); // State to handle validation errors
-  const [isFocused, setIsFocused] = useState({
-    name: false,
-    email: false,
-    message: false,
-  }); // State to track focus and input
-  const [isLoading, setIsLoading] = useState(false); // State to handle loading
+  const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = useCallback((e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      [name]: "", // Clear the error for this field
-    }));
-  };
-
-  const handleFocus = (e) => {
-    const { name } = e.target;
-    setIsFocused((prev) => ({ ...prev, [name]: true }));
-  };
-
-  const handleBlur = (e) => {
-    const { name, value } = e.target;
-    setIsFocused((prev) => ({ ...prev, [name]: value.trim() !== "" }));
-  };
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
+  }, []);
 
   const validateForm = () => {
     const newErrors = {};
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
-    }
+    if (!formData.name.trim()) newErrors.name = "Name is required";
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Email address is invalid";
     }
-    if (!formData.message.trim()) {
-      newErrors.message = "Message is required";
-    }
+    if (!formData.message.trim()) newErrors.message = "Message is required";
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0; // Return true if no errors
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!validateForm()) return;
 
-    setIsLoading(true); // Show loading state
-    const emailSent = await sendEmail(formData);
-    setIsLoading(false); // Hide loading state
-
-    if (emailSent) {
-      setShowPopup(true);
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      alert("Failed to send message. Please try again.");
-    }
-  };
-
-  const sendEmail = async (data) => {
+    setIsLoading(true);
     try {
       const response = await fetch(
         "https://email-fawn-alpha.vercel.app/api/sendEmail",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
         }
       );
-      return response.ok;
+      if (response.ok) {
+        setShowSuccess(true);
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setShowSuccess(false), 4000);
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
     } catch (error) {
       console.error("Error:", error);
-      return false;
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
-  };
-
-  const closePopup = () => {
-    setShowPopup(false); // Close the popup
   };
 
   return (
     <section className="contact section" id="contact">
-      <h2 className="section__title">Get in touch</h2>
-      <span className="section__subtitle">Contact Me</span>
+      <div className="contact__container">
+        <div className="contact__profile">
+          <img
+            src={profile}
+            alt="Mostafa Akajdid"
+            className="contact__portrait"
+            width="96"
+            height="96"
+            decoding="async"
+          />
+          <h2 className="contact__name">Mostafa Akajdid</h2>
+          <p className="contact__role">
+            Available for freelance &amp; full-time opportunities.
+          </p>
 
-      <div className="contact__container container grid">
-        <div className="contact__content">
-          <div className="contact__info">
+          <div className="contact__social">
+            <a
+              href="https://www.linkedin.com/in/mostafa-akajdid/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact__social-link"
+              aria-label="LinkedIn"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/akajdid-mostafa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact__social-link"
+              aria-label="GitHub"
+            >
+              GitHub
+            </a>
             <a
               href="mailto:mostafaakajdid6@gmail.com"
-              className="contact__card"
-              target="_blank"
-              rel="noopener noreferrer"
+              className="contact__social-link"
+              aria-label="Email"
             >
-              <i className="bx bx-mail-send contact__card-icon"></i>
-              <h3 className="contact__card-title">Email</h3>
-              <span className="contact__card-data">
-                mostafaakajdid6@gmail.com
-              </span>
-            </a>
-            <a
-              href="https://wa.me/212762544011"
-              className="contact__card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="bx bxl-whatsapp contact__card-icon"></i>
-              <h3 className="contact__card-title">Whatsapp</h3>
-              <span className="contact__card-data">+2127 62544011</span>
-            </a>
-            <a
-              href="tel:+212762544011"
-              className="contact__card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="bx bx-phone contact__card-icon"></i>
-              <h3 className="contact__card-title">Phone</h3>
-              <span className="contact__card-data">+2127 62544011</span>
+              Email
             </a>
           </div>
+
+          <p className="contact__status">Available now</p>
         </div>
 
-        <div className="contact__content">
-          <form onSubmit={handleSubmit} className="contact__form">
-            <div className="contact__form-div">
+        <div className="contact__card">
+          <h3 className="contact__heading">
+            Let&apos;s build something exceptional.
+          </h3>
+          <p className="contact__text">
+            Whether you&apos;re hiring, building a product, or looking for a
+            technical partner, I&apos;d love to hear what you&apos;re working
+            on.
+          </p>
+
+          <form
+            onSubmit={handleSubmit}
+            className="contact__form"
+            aria-label="Contact form"
+          >
+            <div className="contact__field">
+              <label htmlFor="contact-name" className="contact__label">
+                Name
+              </label>
               <input
+                id="contact-name"
                 type="text"
+                name="name"
+                placeholder="Your name"
                 value={formData.name}
                 onChange={handleChange}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                name="name"
-                className={`contact__form-input ${
-                  isFocused.name ? "has-text" : ""
-                }`}
-                placeholder="Your name"
+                className="contact__input"
                 required
+                autoComplete="name"
+                aria-describedby={errors.name ? "error-name" : undefined}
               />
-              {errors.name && <span className="error">{errors.name}</span>}
+              {errors.name && (
+                <span id="error-name" className="contact__error" role="alert">
+                  {errors.name}
+                </span>
+              )}
             </div>
-            <div className="contact__form-div">
+
+            <div className="contact__field">
+              <label htmlFor="contact-email" className="contact__label">
+                Email
+              </label>
               <input
+                id="contact-email"
                 type="email"
                 name="email"
+                placeholder="Your email"
                 value={formData.email}
                 onChange={handleChange}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                className={`contact__form-input ${
-                  isFocused.email ? "has-text" : ""
-                }`}
-                placeholder="Your email"
+                className="contact__input"
                 required
+                autoComplete="email"
+                aria-describedby={errors.email ? "error-email" : undefined}
               />
-              {errors.email && <span className="error">{errors.email}</span>}
+              {errors.email && (
+                <span id="error-email" className="contact__error" role="alert">
+                  {errors.email}
+                </span>
+              )}
             </div>
-            <div className="contact__form-div contact__form-area">
+
+            <div className="contact__field">
+              <label htmlFor="contact-message" className="contact__label">
+                Message
+              </label>
               <textarea
+                id="contact-message"
                 name="message"
-                cols="30"
-                rows="10"
+                rows="5"
+                placeholder="Tell me about your project..."
                 value={formData.message}
                 onChange={handleChange}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                className={`contact__form-input ${
-                  isFocused.message ? "has-text" : ""
-                }`}
-                placeholder="Type the message here"
+                className="contact__input contact__textarea"
                 required
+                aria-describedby={
+                  errors.message ? "error-message" : undefined
+                }
               />
               {errors.message && (
-                <span className="error">{errors.message}</span>
+                <span
+                  id="error-message"
+                  className="contact__error"
+                  role="alert"
+                >
+                  {errors.message}
+                </span>
               )}
             </div>
+
             <button
               type="submit"
-              className="button button--flex"
+              className="contact__submit"
               disabled={isLoading}
+              aria-busy={isLoading}
             >
-              {isLoading ? "Sending..." : "Send"}
-              {!isLoading && (
-                <img src={send} alt="Send message" className="button__icon" />
-              )}
+              {isLoading ? "Sending..." : "Let's work together"}
             </button>
+
+            {showSuccess && (
+              <p className="contact__success-msg" role="status">
+                ✓ Message sent successfully.
+              </p>
+            )}
+
+            <p className="contact__microcopy">
+              Usually replies within 24 hours.
+            </p>
           </form>
         </div>
       </div>
-
-      {/* Popup Modal */}
-      {showPopup && (
-        <div className="popup-overlay">
-          <div className="popup-content">
-            <p>
-              Thank you for contacting us, I will respond to your message as
-              soon as possible.
-            </p>
-            <button onClick={closePopup} className="popup-ok-button">
-              OK
-            </button>
-          </div>
-        </div>
-      )}
     </section>
   );
 };

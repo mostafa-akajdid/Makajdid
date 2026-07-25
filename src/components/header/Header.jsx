@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./header.css";
 import DarkMode from "../DarkMode/DarkMode";
 
@@ -17,6 +18,8 @@ const Header = () => {
   const [active, setActive] = useState("#home");
   const scrollTimeout = useRef(null);
   const isScrolling = useRef(false);
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,21 +63,26 @@ const Header = () => {
   }, []);
 
   const handleNavClick = (id) => {
-    isScrolling.current = true;
-    setActive(`#${id}`);
     setMenu(false);
     
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    }
+    if (pathname === "/") {
+      isScrolling.current = true;
+      setActive(`#${id}`);
+      
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
 
-    setTimeout(() => {
-      isScrolling.current = false;
-    }, 1000);
+      setTimeout(() => {
+        isScrolling.current = false;
+      }, 1000);
+    } else {
+      navigate("/", { state: { scrollTo: id } });
+    }
   };
 
   return (

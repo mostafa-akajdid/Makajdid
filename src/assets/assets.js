@@ -15,6 +15,7 @@ import Tailwind from "./skills/tailwindcss.svg";
 import Mui from "./skills/material-ui.svg";
 import git from "./skills/git.svg";
 import img2 from "./img2.jpg";
+import profile from "./mostafa.webp";
 import responsive from "./smartphone-call.png";
 import resume from "./mostafa-akajdid-cv.pdf";
 
@@ -38,5 +39,6 @@ export {
   Tailwind,
   Mui,
   git,
+  profile,
 
 };
