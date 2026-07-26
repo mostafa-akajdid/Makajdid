@@ -5,30 +5,30 @@ const EXPERIENCE = [
   {
     role: "Développeur Full-Stack",
     company: "Dynamic Impact",
-    date: "Aug 2025 – Feb 2026",
+    date: "Aug 2025 – Present",
     description:
-      "Built full-stack applications from the ground up — designing REST APIs, optimizing PostgreSQL queries, and leading code reviews. Worked across the entire product lifecycle, from architecture decisions to deployment.",
+      "Building full-stack applications with React, Next.js, and Spring Boot. Designing and integrating REST APIs with Spring Boot and Express.js, modeling PostgreSQL databases, and optimizing data access. Delivering features to production in an Agile environment with thorough code reviews.",
   },
   {
     role: "Développeur Front-End",
     company: "Digitalia Solutions",
     date: "Apr 2025 – Aug 2025",
     description:
-      "Led front-end development for a social platform using React and TypeScript. Implemented authentication, role-based access, and built a reusable component library that the team could iterate on quickly.",
+      "Built the InfluMatch platform using React 18 and TypeScript. Implemented JWT authentication with role-based user management. Created a reusable UI component library with TailwindCSS and shadcn/ui.",
   },
   {
     role: "Développeur Web Full-Stack",
     company: "Ocean Connecting",
     date: "Aug 2024 – Mar 2025",
     description:
-      "Developed a medical platform serving real patients — building secure authentication, role-based access control, and optimizing database performance across PostgreSQL and MySQL.",
+      "Developed the monpatient medical platform with Next.js, implementing secure authentication via NextAuth with role-based access control. Managed data across PostgreSQL and MySQL databases.",
   },
   {
     role: "Développeur Web & Marketing",
     company: "Optisent",
     date: "Sep 2023 – Jun 2024",
     description:
-      "Started my professional career building web campaigns and tracking performance. Learned the fundamentals of HTML, CSS, and data-driven decision making.",
+      "Built email campaigns and marketing offers from scratch in HTML and CSS. Tracked campaign performance and reported on key metrics, learning data-driven decision making early in my career.",
   },
 ];
 
@@ -46,6 +46,13 @@ const EDUCATION = [
     date: "2020 – 2023",
     description:
       "Three-year specialization in software development. Built the foundational skills in programming, databases, and software engineering that everything else grew from.",
+  },
+  {
+    role: "Oracle Certified Professional",
+    company: "Java SE 17 Developer",
+    date: "2025",
+    description:
+      "Industry-recognized certification validating deep knowledge of Java SE 17, including language features, APIs, and best practices.",
   },
 ];
 

@@ -11,9 +11,8 @@ import {
   SiJsonwebtokens,
   SiSpringboot,
   SiNodedotjs,
-  SiExpress,
 } from "react-icons/si";
-import { RiNextjsLine, RiCodeLine } from "react-icons/ri";
+import { RiNextjsLine, RiCodeLine, RiLoopLeftLine } from "react-icons/ri";
 import { BiLogoPostgresql } from "react-icons/bi";
 import SkillItem from "./SkillItem";
 import "./skills.css";
@@ -45,7 +44,8 @@ const SKILL_GROUPS = [
       { name: "GitHub", icon: SiGithub },
       { name: "Docker", icon: SiDocker, primary: true },
       { name: "CI/CD", icon: SiGithubactions, primary: true },
-      { name: "Authentication (JWT)", icon: SiJsonwebtokens },
+      { name: "JWT / NextAuth", icon: SiJsonwebtokens },
+      { name: "Agile / Scrum", icon: RiLoopLeftLine },
     ],
   },
 ];

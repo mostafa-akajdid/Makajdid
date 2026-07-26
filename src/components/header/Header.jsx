@@ -1,56 +1,57 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+
 import "./header.css";
 import DarkMode from "../DarkMode/DarkMode";
 
 const navItems = [
   { id: "about", name: "About" },
-  { id: "skills", name: "Skills" },
-  { id: "case-studies", name: "Projects" },
+  { id: "services", name: "Services" },
+  { id: "case-studies", name: "Project" },
   { id: "contact", name: "Contact" },
 ];
 
+const SECTION_IDS = ["home", "about", "skills", "services", "evolution", "case-studies", "contact"];
+
 const Header = () => {
   const [active, setActive] = useState("");
-  const scrollTimeout = useRef(null);
+
   const isScrolling = useRef(false);
+  const observerRef = useRef(null);
+
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
+  /* ─── IntersectionObserver for active section ─── */
   useEffect(() => {
     if (pathname !== "/") return;
 
-    const handleScroll = () => {
-      if (isScrolling.current) return;
+    if (observerRef.current) observerRef.current.disconnect();
 
-      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+    const sections = SECTION_IDS
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
 
-      scrollTimeout.current = setTimeout(() => {
-        const sections = document.querySelectorAll("section[id]");
-        let current = "";
+    if (sections.length === 0) return;
 
-        sections.forEach((section) => {
-          const top = section.offsetTop;
-          const height = section.offsetHeight;
-          if (
-            window.scrollY >= top - 300 &&
-            window.scrollY < top + height - 300
-          ) {
-            current = section.id;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting && !isScrolling.current) {
+            setActive(entry.target.id);
           }
-        });
+        }
+      },
+      { rootMargin: "-40% 0px -40% 0px", threshold: 0 }
+    );
 
-        if (current) setActive(current);
-      }, 100);
-    };
+    sections.forEach((section) => observer.observe(section));
+    observerRef.current = observer;
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
-    };
+    return () => observer.disconnect();
   }, [pathname]);
 
+  /* ─── nav click — smooth scroll to section + cross-page navigation ─── */
   const handleNavClick = useCallback(
     (id) => {
       if (pathname === "/") {
@@ -58,9 +59,7 @@ const Header = () => {
         setActive(id);
         const el = document.getElementById(id);
         if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-        setTimeout(() => {
-          isScrolling.current = false;
-        }, 1000);
+        setTimeout(() => { isScrolling.current = false; }, 1000);
       } else {
         navigate("/", { state: { scrollTo: id } });
       }
@@ -68,6 +67,7 @@ const Header = () => {
     [pathname, navigate]
   );
 
+  /* ─── brand click — scroll to top on homepage ─── */
   const handleBrandClick = useCallback(
     (e) => {
       if (pathname === "/") {
@@ -95,7 +95,7 @@ const Header = () => {
             <li key={item.id} role="listitem">
               <a
                 href={`#${item.id}`}
-                className={`nav__link${active === item.id ? " nav__link--active" : ""}`}
+                className={`nav__link${active === item.id ? " nav__link--active" : ""}${item.id === "contact" ? " nav__link--cta" : ""}`}
                 onClick={(e) => {
                   e.preventDefault();
                   handleNavClick(item.id);

@@ -38,7 +38,9 @@ const About = () => {
               I&apos;m a full-stack developer who believes software should serve
               people, not the other way around. Based in Morocco, I&apos;ve spent
               years learning what makes digital products actually work — not just
-              compile.
+              compile. I hold an Oracle Certified Professional certification in
+              Java SE 17, and I bring that same depth to every layer of the
+              stack.
             </p>
             <p className="about__text">
               I start with the person using the product, not the technology
@@ -48,8 +50,10 @@ const About = () => {
             </p>
             <p className="about__text">
               You can expect clear communication, thoughtful code, and a genuine
-              interest in solving the right problem. I work best with people who
-              care about quality and aren&apos;t afraid to iterate.
+              interest in solving the right problem. I work in French
+              (professional) and English (intermediate), and I do my best work
+              with people who care about quality and aren&apos;t afraid to
+              iterate.
             </p>
 
             <div className="about__actions">
