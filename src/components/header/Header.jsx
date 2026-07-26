@@ -7,7 +7,7 @@ import DarkMode from "../DarkMode/DarkMode";
 const navItems = [
   { id: "about", name: "About" },
   { id: "services", name: "Services" },
-  { id: "case-studies", name: "Project" },
+  { id: "case-studies", name: "Projects" },
   { id: "contact", name: "Contact" },
 ];
 

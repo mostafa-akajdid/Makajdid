@@ -11,11 +11,13 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleChange = useCallback((e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
+    setSubmitError("");
   }, []);
 
   const validateForm = () => {
@@ -36,6 +38,7 @@ const Contact = () => {
     if (!validateForm()) return;
 
     setIsLoading(true);
+    setSubmitError("");
     try {
       const response = await fetch(
         "https://email-fawn-alpha.vercel.app/api/sendEmail",
@@ -50,11 +53,11 @@ const Contact = () => {
         setFormData({ name: "", email: "", message: "" });
         setTimeout(() => setShowSuccess(false), 4000);
       } else {
-        alert("Failed to send message. Please try again.");
+        setSubmitError("Failed to send message. Please try again.");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Failed to send message. Please try again.");
+      setSubmitError("Failed to send message. Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -206,8 +209,14 @@ const Contact = () => {
               {isLoading ? "Sending..." : "Let's work together"}
             </button>
 
+            {submitError && (
+              <p className="contact__submit-error" role="alert">
+                {submitError}
+              </p>
+            )}
+
             {showSuccess && (
-              <p className="contact__success-msg" role="status">
+              <p className="contact__success-msg" aria-live="polite">
                 ✓ Message sent successfully.
               </p>
             )}

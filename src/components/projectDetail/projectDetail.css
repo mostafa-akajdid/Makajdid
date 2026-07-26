@@ -6,7 +6,7 @@
 .pe {
   width: 100%;
   min-height: 100vh;
-  background: var(--bg-color);
+  background: var(--body-color);
   position: relative;
 }
 
@@ -36,7 +36,7 @@
   display: inline-block;
   background: none;
   border: none;
-  color: var(--text-color-light);
+  color: var(--text-color);
   font-family: var(--body-font);
   font-size: var(--smaller-font-size);
   cursor: pointer;
@@ -761,4 +761,50 @@
 
 .pe__404-link:hover {
   opacity: 1;
+}
+
+/*=============== REDUCED MOTION ===============*/
+@media (prefers-reduced-motion: reduce) {
+  .pe__progress {
+    transition: none;
+  }
+
+  .pe__back {
+    transition: none;
+  }
+
+  .pe__image-btn {
+    transition: none;
+  }
+
+  .pe__image-btn:hover {
+    transform: none;
+    box-shadow: none;
+    filter: none;
+  }
+
+  .pe__link-arrow {
+    transition: none;
+  }
+
+  .pe__link:hover .pe__link-arrow {
+    transform: none;
+  }
+
+  .pe__lightbox {
+    animation: none;
+    opacity: 1;
+  }
+
+  .pe__story-title {
+    transition: none;
+  }
+
+  .pe__next {
+    transition: none;
+  }
+
+  .pe__next-image {
+    transition: none;
+  }
 }

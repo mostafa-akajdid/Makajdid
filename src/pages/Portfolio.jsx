@@ -15,7 +15,6 @@ const Qualification = lazy(() =>
 const CaseStudies = lazy(() =>
   import("../components/caseStudies/CaseStudies")
 );
-const Work = lazy(() => import("../components/work/Work"));
 const Contact = lazy(() => import("../components/contact/Contact"));
 
 const Portfolio = () => {

@@ -12,9 +12,9 @@ const Data = () => {
       </h1>
       <TypeAnimation
         sequence={[
-          "Full-Stack Developer | React / Next.js | Java / Spring Boot",
+          "Full-Stack Developer | React · Next.js · Java · Spring Boot",
           4000,
-          "React · Next.js · Spring Boot",
+          "Building polished web experiences from idea to production",
           3000,
         ]}
         cursor={false}
@@ -24,17 +24,16 @@ const Data = () => {
         repeat={Infinity}
       />
       <p className="home__description">
-        Full-stack developer focused on React, Next.js, and Java (Spring Boot).
-        I build complete web apps—from fast, SEO-friendly UIs with SSR to secure
-        REST APIs and role-based access (RBAC).
-        <br />
-        <br />
-        I work in Agile teams and care about code quality, reviews, and
-        shipping features to production. Based in Casablanca, Morocco.
+        I build fast, thoughtful web applications that feel clear to use and
+        reliable to scale.
+      </p>
+      <p className="home__description">
+        From responsive React and Next.js interfaces to secure Java/Spring Boot
+        APIs, I turn product ideas into production-ready features.
       </p>
 
       <a href="#contact" className="button button--flex">
-        Say Hello
+        Let&rsquo;s build something
         <img src={send} alt="send icon" className="button__icon" />
       </a>
     </div>
