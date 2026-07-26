@@ -58,13 +58,13 @@ const EDUCATION = [
 
 const HEADING = "Every role shaped how I think about software.";
 
-const renderEntries = (entries, isExperience = false) => (
+const renderEntries = (entries, isExperience = false, activeIndex = 0) => (
   <div className="qualification__timeline">
     {entries.map((entry, index) => (
       <div
         className={`qualification__entry${
           isExperience && index === 0 ? " qualification__entry--hero" : ""
-        }`}
+        }${index === activeIndex ? " qualification__entry--active" : ""}`}
         key={entry.role}
       >
         <h3 className="qualification__entry-role">{entry.role}</h3>
@@ -149,7 +149,7 @@ const Qualification = () => {
 
         <div className="qualification__actions">
           <a href="#case-studies" className="qualification__cta">
-            See selected projects
+            Selected Work
             <span className="qualification__cta-arrow" aria-hidden="true">
               &rarr;
             </span>

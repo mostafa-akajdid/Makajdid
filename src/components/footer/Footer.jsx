@@ -1,70 +1,45 @@
 import "./footer.css";
+import { resume } from "../../assets/assets";
+
 const Footer = () => {
   return (
-    <footer className="footer section">
+    <footer className="footer">
       <div className="footer__container container">
-        <h2 className="footer__title">Portfolio</h2>
+        <p className="footer__name">Mostafa Akajdid</p>
+        <p className="footer__role">Full-Stack Software Engineer</p>
 
-        <ul className="footer__list">
-          <li>
-            <a href="#about" className="footer__link">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#work" className="footer__link">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#services" className="footer__link">
-              Services
-            </a>
-          </li>
-        </ul>
-
-        <address className="footer__address">
-          <p>Casablanca, Morocco</p>
-          <p>
-            <a href="mailto:mostafaakajdid6@gmail.com">mostafaakajdid6@gmail.com</a>
-          </p>
-          <p>
-            <a href="tel:+212762544011">+212 7 62 54 40 11</a>
-          </p>
-        </address>
-
-        <div className="footer__social">
-          <a
-            href="https://www.instagram.com/mostafaakajdidm/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer__social-link"
-            aria-label="Instagram"
-          >
-            <i className="bx bxl-instagram"></i>
-          </a>
+        <div className="footer__links">
           <a
             href="https://www.linkedin.com/in/mostafa-akajdid/"
             target="_blank"
             rel="noopener noreferrer"
-            className="footer__social-link"
-            aria-label="LinkedIn"
+            className="footer__link"
           >
-            <i className="bx bxl-linkedin"></i>
+            LinkedIn
           </a>
           <a
             href="https://github.com/akajdid-mostafa"
             target="_blank"
             rel="noopener noreferrer"
-            className="footer__social-link"
-            aria-label="GitHub"
+            className="footer__link"
           >
-            <i className="bx bxl-github"></i>
+            GitHub
+          </a>
+          <a href="mailto:mostafaakajdid6@gmail.com" className="footer__link">
+            Email
+          </a>
+          <a
+            href={resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__link"
+            download
+          >
+            Resume
           </a>
         </div>
-        <span className="footer__copy">
-          &#169; 2026 Mostafa Akajdid. All rights reserved.
-        </span>
+
+        <span className="footer__copy">&copy; 2026 Mostafa Akajdid.</span>
       </div>
     </footer>
   );

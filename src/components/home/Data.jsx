@@ -4,25 +4,31 @@ import { send } from "../../assets/assets";
 import TextDecrypt from "../Utils/TextDecrypt";
 import { TypeAnimation } from "react-type-animation";
 
-const Data = () => {
+const Data = ({ stage }) => {
   return (
     <div className="home__data">
       <h1 className="home__title">
-        <TextDecrypt text={"MOSTAFA AKAJDID"} />
+        {stage !== "idle" ? (
+          <TextDecrypt text={"MOSTAFA AKAJDID"} />
+        ) : (
+          <span>&nbsp;</span>
+        )}
       </h1>
-      <TypeAnimation
-        sequence={[
-          "Full-Stack Developer | React · Next.js · Java · Spring Boot",
-          4000,
-          "Building polished web experiences from idea to production",
-          3000,
-        ]}
-        cursor={false}
-        wrapper="span"
-        speed={5}
-        className="home__subtitle"
-        repeat={Infinity}
-      />
+      {(stage === "typing" || stage === "complete") && (
+        <TypeAnimation
+          sequence={[
+            "Full-Stack Developer | React · Next.js · Java · Spring Boot",
+            4000,
+            "Building polished web experiences from idea to production",
+            3000,
+          ]}
+          cursor={false}
+          wrapper="span"
+          speed={25}
+          className="home__subtitle"
+          repeat={Infinity}
+        />
+      )}
       <p className="home__description">
         I build fast, thoughtful web applications that feel clear to use and
         reliable to scale.

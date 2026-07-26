@@ -20,6 +20,7 @@ const CaseStudies = ({ showHeader = true }) => {
             slug={project.slug}
             title={project.title}
             description={project.description}
+            subtitle={project.subtitle}
             image={project.image}
             stack={project.stack}
           />

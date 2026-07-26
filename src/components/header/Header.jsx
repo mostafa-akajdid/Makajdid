@@ -15,6 +15,7 @@ const SECTION_IDS = ["home", "about", "skills", "services", "evolution", "case-s
 
 const Header = () => {
   const [active, setActive] = useState("");
+  const [scrolled, setScrolled] = useState(false);
 
   const isScrolling = useRef(false);
   const observerRef = useRef(null);
@@ -51,6 +52,15 @@ const Header = () => {
     return () => observer.disconnect();
   }, [pathname]);
 
+  /* ─── scroll listener for header--scrolled state ─── */
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 80);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   /* ─── nav click — smooth scroll to section + cross-page navigation ─── */
   const handleNavClick = useCallback(
     (id) => {
@@ -79,7 +89,7 @@ const Header = () => {
   );
 
   return (
-    <header className="header">
+    <header className={`header${scrolled ? " header--scrolled" : ""}`}>
       <nav className="nav" aria-label="Main navigation">
         <a
           href="/"
@@ -100,7 +110,7 @@ const Header = () => {
                   e.preventDefault();
                   handleNavClick(item.id);
                 }}
-                aria-current={active === item.id ? "true" : undefined}
+                aria-current={active === item.id ? "page" : undefined}
               >
                 {item.name}
               </a>

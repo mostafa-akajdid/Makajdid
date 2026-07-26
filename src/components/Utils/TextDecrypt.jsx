@@ -61,7 +61,7 @@ const decryptOptions = {
     "y",
     "z",
   ],
-  interval: 50,
+  interval: 80,
 };
 
 const TextDecrypt = (props) => {
