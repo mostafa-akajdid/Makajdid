@@ -1,5 +1,15 @@
 # Mostafa Akajdid — Full-Stack Developer Portfolio
 
+## Links
+- [Homepage](https://akajdidm.vercel.app)
+- [Projects](https://akajdidm.vercel.app/projects)
+- [About](https://akajdidm.vercel.app/#about)
+- [Skills](https://akajdidm.vercel.app/#skills)
+- [Services](https://akajdidm.vercel.app/#services)
+- [Evolution](https://akajdidm.vercel.app/#evolution)
+- [Case Studies](https://akajdidm.vercel.app/#case-studies)
+- [Contact](https://akajdidm.vercel.app/#contact)
+
 ## About
 Mostafa Akajdid is a full-stack developer based in Casablanca, Morocco. He specializes in React, Next.js, TypeScript, Spring Boot, and PostgreSQL. He is an Oracle Certified Java SE 17 Developer (OCP).
 
@@ -28,17 +38,17 @@ Mostafa Akajdid is a full-stack developer based in Casablanca, Morocco. He speci
 - Full Stack Formation (Spring Boot & React) — Coding Tech, Casablanca, 2025
 - Technicien Specialise en Developpement Informatique — ISTA TADDART, Agadir, 2020–2023
 
+## Projects
+- [Real Estate Platform](https://akajdidm.vercel.app/projects/realstate) — Next.js, Chakra UI, Prisma, PostgreSQL
+- [Glass Ocean](https://akajdidm.vercel.app/projects/glassocean) — Next.js, Material-UI, GSAP, glass morphism design
+- [Piolec](https://akajdidm.vercel.app/projects/piolec) — Next.js, Tailwind CSS, electrical products platform
+- [Monpatient](https://akajdidm.vercel.app/projects/monpatient) — Next.js, Redux Toolkit, Node.js, Fastify, healthcare SaaS
+- [StoryCareer](https://akajdidm.vercel.app/projects/storycareer) — Next.js, Node.js, Tailwind CSS, Clerk, career platform
+- [Gemini](https://akajdidm.vercel.app/projects/gemini) — React, Gemini API, generative AI app
+
 ## Contact
-- Email: mostafaakajdid6@gmail.com
+- Email: [mostafaakajdid6@gmail.com](mailto:mostafaakajdid6@gmail.com)
 - Phone: +212 7 62 54 40 11
 - Location: Casablanca, Morocco
-- LinkedIn: https://www.linkedin.com/in/mostafa-akajdid/
-- GitHub: https://github.com/akajdid-mostafa
-
-## Projects
-- Real Estate Platform — Next.js, Chakra UI, Prisma, PostgreSQL
-- Glass Ocean — Next.js, Material-UI, GSAP, glass morphism design
-- Piolec — Next.js, Tailwind CSS, electrical products platform
-- Monpatient — Next.js, Redux Toolkit, Node.js, Fastify, healthcare SaaS
-- StoryCareer — Next.js, Node.js, Tailwind CSS, Clerk, career platform
-- Gemini — React, Gemini API, generative AI app
+- [LinkedIn](https://www.linkedin.com/in/mostafa-akajdid/)
+- [GitHub](https://github.com/akajdid-mostafa)
