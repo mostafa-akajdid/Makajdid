@@ -27,7 +27,7 @@ const Data = () => {
 
       <a href="#contact" className="button button--flex">
         Let&rsquo;s build something
-        <img src={send} alt="send icon" className="button__icon" />
+        <img src={send} alt="send icon" className="button__icon" width="24" height="24" />
       </a>
     </div>
   );
