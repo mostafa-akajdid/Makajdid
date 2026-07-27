@@ -1,5 +1,6 @@
-import { useEffect, useState, useCallback, useRef } from 'react'
+import { useEffect, useState, useCallback, useRef, useMemo } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { getProjectBySlug, getNextProject } from '../../data/caseStudies'
 import './projectDetail.css'
 
@@ -15,8 +16,8 @@ export default function ProjectDetail() {
   const { slug } = useParams()
   const navigate = useNavigate()
 
-  const project = getProjectBySlug(slug)
-  const nextProject = project ? getNextProject(slug) : null
+  const project = useMemo(() => getProjectBySlug(slug), [slug])
+  const nextProject = useMemo(() => project ? getNextProject(slug) : null, [slug, project])
 
   const [lightbox, setLightbox] = useState(null)
   const [progress, setProgress] = useState(0)
@@ -64,13 +65,7 @@ export default function ProjectDetail() {
     window.scrollTo({ top: 0, behavior: 'instant' })
   }, [slug])
 
-  // Dynamic title
-  useEffect(() => {
-    if (!project) return
-    const prev = document.title
-    document.title = `${project.title} — Mostafa Akajdid`
-    return () => { document.title = prev }
-  }, [project])
+  // Dynamic title (handled by Helmet in JSX below)
 
   // Feature 5 + lightbox: Keyboard navigation
   useEffect(() => {
@@ -114,23 +109,64 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className="pe pe--404">
-        <div className="pe__404">
-          <h1 className="pe__404-title">404</h1>
-          <p className="pe__404-text">This project could not be found.</p>
-          <Link to="/projects" className="pe__404-link">
-            ← All Projects
-          </Link>
+      <>
+        <Helmet>
+          <title>404 — Project Not Found | Mostafa Akajdid</title>
+          <meta
+            name="description"
+            content="The requested project could not be found. Browse the portfolio of Mostafa Akajdid."
+          />
+          <meta property="og:title" content="404 — Project Not Found | Mostafa Akajdid" />
+          <meta
+            property="og:description"
+            content="The requested project could not be found. Browse the portfolio of Mostafa Akajdid."
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="https://akajdidm.vercel.app/og-image.png" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="404 — Project Not Found | Mostafa Akajdid" />
+          <meta
+            name="twitter:description"
+            content="The requested project could not be found. Browse the portfolio of Mostafa Akajdid."
+          />
+          <meta name="twitter:image" content="https://akajdidm.vercel.app/og-image.png" />
+        </Helmet>
+        <div className="pe pe--404">
+          <div className="pe__404">
+            <h1 className="pe__404-title">404</h1>
+            <p className="pe__404-text">This project could not be found.</p>
+            <Link to="/projects" className="pe__404-link">
+              ← All Projects
+            </Link>
+          </div>
         </div>
-      </div>
+      </>
     )
   }
 
   const { title, subtitle, meta, story, technologies, liveUrl, githubUrl, facts, status } = project
-  const readTime = computeReadingTime(story)
+  const readTime = useMemo(() => computeReadingTime(story), [story])
 
   return (
-    <article className="pe">
+    <>
+      <Helmet>
+        <title>{title} — Mostafa Akajdid</title>
+        <meta
+          name="description"
+          content={subtitle}
+        />
+        <link rel="canonical" href={`https://akajdidm.vercel.app/projects/${slug}`} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={subtitle} />
+        <meta property="og:url" content={`https://akajdidm.vercel.app/projects/${slug}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://akajdidm.vercel.app/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={subtitle} />
+        <meta name="twitter:image" content="https://akajdidm.vercel.app/og-image.png" />
+      </Helmet>
+      <article className="pe">
       {/* Feature 1: Reading progress bar */}
       <div className="pe__progress" style={{ width: `${progress}%` }} aria-hidden="true" />
 
@@ -311,5 +347,6 @@ export default function ProjectDetail() {
         </div>
       )}
     </article>
+    </>
   )
 }

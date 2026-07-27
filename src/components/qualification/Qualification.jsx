@@ -7,28 +7,28 @@ const EXPERIENCE = [
     company: "Dynamic Impact",
     date: "Aug 2025 – Present",
     description:
-      "Building full-stack applications with React, Next.js, and Spring Boot. Designing and integrating REST APIs with Spring Boot and Express.js, modeling PostgreSQL databases, and optimizing data access. Delivering features to production in an Agile environment with thorough code reviews.",
+      "Building full-stack applications with React, Next.js, and Spring Boot. Work includes REST API design and integration with Spring Boot and Express.js, PostgreSQL data modeling, and database access optimization — delivered through an Agile workflow with regular code reviews.",
   },
   {
     role: "Développeur Front-End",
     company: "Digitalia Solutions",
     date: "Apr 2025 – Aug 2025",
     description:
-      "Built the InfluMatch platform using React 18 and TypeScript. Implemented JWT authentication with role-based user management. Created a reusable UI component library with TailwindCSS and shadcn/ui.",
+      "Built the InfluMatch platform with React 18 and TypeScript, implementing JWT authentication with role-based user management and creating a reusable UI component library with TailwindCSS and shadcn/ui.",
   },
   {
     role: "Développeur Web Full-Stack",
     company: "Ocean Connecting",
     date: "Aug 2024 – Mar 2025",
     description:
-      "Developed the monpatient medical platform with Next.js, implementing secure authentication via NextAuth with role-based access control. Managed data across PostgreSQL and MySQL databases.",
+      "Developed the monpatient medical platform with Next.js, implementing role-based authentication and access control through NextAuth. Managed data across PostgreSQL and MySQL databases.",
   },
   {
     role: "Développeur Web & Marketing",
     company: "Optisent",
     date: "Sep 2023 – Jun 2024",
     description:
-      "Built email campaigns and marketing offers from scratch in HTML and CSS. Tracked campaign performance and reported on key metrics, learning data-driven decision making early in my career.",
+      "Built email campaigns and marketing offers from scratch using HTML and CSS. Tracked campaign performance, reported on key metrics, and gained early experience in data-driven decision making.",
   },
 ];
 
@@ -38,21 +38,21 @@ const EDUCATION = [
     company: "Coding Tech, Casablanca",
     date: "2025",
     description:
-      "Intensive full-stack training focused on modern web technologies. Deepened understanding of backend architecture, API design, and system thinking.",
+      "Intensive full-stack training in modern web technologies, with a focus on backend architecture, API design, and system thinking.",
   },
   {
     role: "Technicien Spécialisé en Développement Informatique",
     company: "ISTA TADDART, Agadir",
     date: "2020 – 2023",
     description:
-      "Three-year specialization in software development. Built the foundational skills in programming, databases, and software engineering that everything else grew from.",
+      "Three-year specialization in software development that built foundational skills in programming, databases, and software engineering.",
   },
   {
     role: "Oracle Certified Professional",
     company: "Java SE 17 Developer",
     date: "2025",
     description:
-      "Industry-recognized certification validating deep knowledge of Java SE 17, including language features, APIs, and best practices.",
+      "Industry-recognized certification in Java SE 17, covering core language features, APIs, and best practices.",
   },
 ];
 

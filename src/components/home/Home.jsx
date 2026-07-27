@@ -15,22 +15,8 @@ const Home = () => {
       setStage("complete");
       return;
     }
-
-    const t1 = setTimeout(() => setStage("decrypting"), 200);
-    return () => clearTimeout(t1);
+    setStage("complete");
   }, []);
-
-  useEffect(() => {
-    if (stage !== "decrypting") return;
-    const t2 = setTimeout(() => setStage("typing"), 2500);
-    return () => clearTimeout(t2);
-  }, [stage]);
-
-  useEffect(() => {
-    if (stage !== "typing") return;
-    const t3 = setTimeout(() => setStage("complete"), 500);
-    return () => clearTimeout(t3);
-  }, [stage]);
 
   return (
     <section className="home section" id="home">
@@ -40,7 +26,7 @@ const Home = () => {
           <div
             className={`home__img${stage === "complete" ? " home__img--animated" : ""}`}
           ></div>
-          <Data stage={stage} />
+          <Data />
         </div>
         <ScrollDown />
       </div>

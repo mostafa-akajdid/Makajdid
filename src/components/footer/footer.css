@@ -37,7 +37,7 @@
   font-weight: var(--font-normal);
   color: var(--text-color);
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   letter-spacing: 0.01em;
 }
 

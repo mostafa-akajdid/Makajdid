@@ -241,6 +241,7 @@
 .contact__submit:focus-visible {
   outline: 1px solid var(--title-color);
   outline-offset: 3px;
+  border-radius: 2px;
 }
 
 /* ─── SUBMIT ERROR ─── */

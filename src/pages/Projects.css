@@ -36,7 +36,8 @@
 }
 
 /* Case Studies wrapper spacing */
-.projects-hero + section {
+.projects-hero + section,
+.projects-hero + .case-studies {
   padding-top: 0;
 }
 
@@ -86,7 +87,7 @@
   padding: 0.85rem 1.75rem;
   border: 1px solid var(--title-color);
   border-radius: 999px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .projects-cta__link:hover {
@@ -96,13 +97,13 @@
 
 .projects-cta__link:focus-visible {
   outline: 1px solid var(--title-color);
-  outline-offset: 4px;
+  outline-offset: 3px;
 }
 
 .projects-cta__arrow {
   width: 16px;
   height: 16px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .projects-cta__link:hover .projects-cta__arrow {

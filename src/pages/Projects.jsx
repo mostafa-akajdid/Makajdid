@@ -1,5 +1,6 @@
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
@@ -13,15 +14,31 @@ const CaseStudies = lazy(() =>
 const PROJECT_COUNT = 6;
 
 const Projects = () => {
-  useEffect(() => {
-    document.title = "Projects — Mostafa Akajdid";
-    return () => {
-      document.title = "Mostafa Akajdid | Portfolio";
-    };
-  }, []);
-
   return (
     <>
+      <Helmet>
+        <title>Projects — Mostafa Akajdid</title>
+        <meta
+          name="description"
+          content="A curated selection of digital products designed and built by Mostafa Akajdid. React, Next.js, Spring Boot, PostgreSQL projects."
+        />
+        <link rel="canonical" href="https://akajdidm.vercel.app/projects" />
+        <meta property="og:title" content="Projects — Mostafa Akajdid" />
+        <meta
+          property="og:description"
+          content="A curated selection of digital products designed and built by Mostafa Akajdid. React, Next.js, Spring Boot, PostgreSQL projects."
+        />
+        <meta property="og:url" content="https://akajdidm.vercel.app/projects" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://akajdidm.vercel.app/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Projects — Mostafa Akajdid" />
+        <meta
+          name="twitter:description"
+          content="A curated selection of digital products designed and built by Mostafa Akajdid. React, Next.js, Spring Boot, PostgreSQL projects."
+        />
+        <meta name="twitter:image" content="https://akajdidm.vercel.app/og-image.png" />
+      </Helmet>
       <Header />
       <main className="main">
         <section className="projects-hero">

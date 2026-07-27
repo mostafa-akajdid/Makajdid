@@ -1,4 +1,6 @@
-const ServiceItem = ({ icon: Icon, title, description }) => {
+import { memo } from "react";
+
+const ServiceItem = memo(({ icon: Icon, title, description }) => {
   return (
     <div className="services__card">
       <Icon className="services__icon" aria-hidden="true" />
@@ -6,6 +8,6 @@ const ServiceItem = ({ icon: Icon, title, description }) => {
       <p className="services__description">{description}</p>
     </div>
   );
-};
+});
 
 export default ServiceItem;

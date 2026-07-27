@@ -13,13 +13,13 @@ const SERVICES = [
     icon: FiMonitor,
     title: "Front-end Development",
     description:
-      "Fast, responsive interfaces built with attention to detail and usability.",
+      "Polished, responsive interfaces that work seamlessly across every device.",
   },
   {
     icon: FiCode,
     title: "Full-stack Development",
     description:
-      "Complete digital products built to remain maintainable as they grow.",
+      "End-to-end products built to be reliable, scalable, and easy to maintain.",
   },
 ];
 
@@ -52,7 +52,7 @@ const Services = () => {
 
         <div className="services__actions">
           <a href="#contact" className="services__cta">
-            Let&apos;s build something together
+            Discuss your project
             <span className="services__cta-arrow" aria-hidden="true">
               &rarr;
             </span>

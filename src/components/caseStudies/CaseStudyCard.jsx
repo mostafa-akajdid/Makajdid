@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, memo } from "react";
 import { Link } from "react-router-dom";
 import { extractColorFromImage } from "../../utils/extractColor";
 
@@ -48,4 +48,4 @@ const CaseStudyCard = ({ slug, title, subtitle, description, stack, image }) => 
   );
 };
 
-export default CaseStudyCard;
+export default memo(CaseStudyCard);

@@ -73,6 +73,7 @@ const Contact = () => {
             className="contact__portrait"
             width="96"
             height="96"
+            loading="lazy"
             decoding="async"
           />
           <h2 className="contact__name">Mostafa Akajdid</h2>

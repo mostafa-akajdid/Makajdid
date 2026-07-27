@@ -43,7 +43,7 @@
   padding: 0;
   margin-bottom: 4rem;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .pe__back:hover {
@@ -154,7 +154,7 @@
   color: var(--text-color);
   text-decoration: none;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -176,7 +176,7 @@
 }
 
 .pe__link-arrow {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   display: inline-block;
 }
 
@@ -258,7 +258,7 @@
   color: var(--title-color);
   margin-bottom: 2rem;
   opacity: 0.35;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .pe__story-title--active {
@@ -375,7 +375,7 @@
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .pe__next:hover {
@@ -421,7 +421,7 @@
   margin: 0;
   padding: 0;
   opacity: 0.85;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .pe__next:hover .pe__next-image {
@@ -472,7 +472,7 @@
   font-size: 1.25rem;
   cursor: pointer;
   padding: 0.5rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   font-family: var(--body-font);
 }
 
@@ -756,7 +756,7 @@
   font-size: var(--smaller-font-size);
   color: var(--text-color);
   opacity: 0.6;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .pe__404-link:hover {
