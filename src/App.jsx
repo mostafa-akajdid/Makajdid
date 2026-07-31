@@ -7,6 +7,7 @@ const Projects = lazy(() => import("./pages/Projects"));
 const ProjectDetail = lazy(() =>
   import("./components/projectDetail/ProjectDetail")
 );
+const Privacy = lazy(() => import("./pages/Privacy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => {
@@ -34,6 +35,14 @@ const App = () => {
           element={
             <Suspense fallback={null}>
               <ProjectDetail />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/privacy"
+          element={
+            <Suspense fallback={null}>
+              <Privacy />
             </Suspense>
           }
         />

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./home.css";
 import Social from "./Social";
 import Data from "./Data";
-import ScrollDown from "./ScrollDown";
 
 const Home = () => {
   const [stage, setStage] = useState("idle");
@@ -28,7 +27,6 @@ const Home = () => {
           ></div>
           <Data />
         </div>
-        <ScrollDown />
       </div>
     </section>
   );

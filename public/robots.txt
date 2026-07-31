@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://akajdidm.vercel.app/sitemap.xml
+Sitemap: https://makajdid.vercel.app/sitemap.xml

@@ -58,13 +58,8 @@
   display: flex;
   flex-direction: column;
   color: inherit;
-  transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
   text-decoration: none;
   outline: none;
-}
-
-.case-study-card--prototype:hover {
-  transform: translateY(-2px);
 }
 
 .case-study-card--prototype:focus-visible {
@@ -87,13 +82,6 @@
   box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.06),
     0 1px 2px rgba(0, 0, 0, 0.04);
-  transition: box-shadow 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.case-study-card--prototype:hover .prototype__image-zone {
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.08),
-    0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .prototype__image-bg {
@@ -110,11 +98,17 @@
   display: block;
   border-radius: 0.5rem;
   transform: rotate(2deg) translate(2%);
+  transform-origin: center center;
   box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.06),
     0 1px 2px rgba(0, 0, 0, 0.04);
   position: relative;
   z-index: 1;
+  transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.case-study-card--prototype:hover .prototype__image {
+  transform: scale(1.035) rotate(2deg) translate(2%);
 }
 
 /* ─── Identity Seal ─── */
@@ -134,13 +128,14 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   width: auto;
   z-index: 2;
-  transition: box-shadow 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+  opacity: 0.9;
+  transform-origin: center;
+  transition: opacity 0.42s cubic-bezier(0.22, 1, 0.36, 1), transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.case-study-card--prototype:hover .prototype__seal {
-  box-shadow:
-    0 6px 16px rgba(0, 0, 0, 0.08),
-    0 2px 4px rgba(0, 0, 0, 0.04);
+.case-study-card--prototype:hover .prototype__badge {
+  /* opacity: 1; */
+  transform:  scale(1.16);
 }
 
 .prototype__badge {
@@ -171,7 +166,7 @@
   line-height: 1;
   color: var(--title-color);
   opacity: 0.45;
-  transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.42s cubic-bezier(0.22, 1, 0.36, 1);
   margin-left: 0.125rem;
 }
 
@@ -335,14 +330,21 @@
     transition: none;
   }
 
-  .case-study-card--prototype:hover {
-    transform: none;
+  .prototype__image {
+    transition: none;
   }
 
-  .case-study-card--prototype:hover .prototype__image-zone {
-    box-shadow:
-      0 4px 12px rgba(0, 0, 0, 0.06),
-      0 1px 2px rgba(0, 0, 0, 0.04);
+  .case-study-card--prototype:hover .prototype__image {
+    transform: rotate(2deg) translate(2%);
+  }
+
+  .prototype__seal {
+    transition: none;
+  }
+
+  .case-study-card--prototype:hover .prototype__seal {
+    transform: translateX(-50%);
+    opacity: 1;
   }
 
   .prototype__seal-arrow {
@@ -351,6 +353,6 @@
 
   .case-study-card--prototype:hover .prototype__seal-arrow {
     transform: none;
-    opacity: 0.45;
+    opacity: 0.9;
   }
 }

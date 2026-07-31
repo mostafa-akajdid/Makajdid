@@ -3,28 +3,28 @@ import "./qualification.css";
 
 const EXPERIENCE = [
   {
-    role: "Développeur Full-Stack",
+    role: "Full-Stack Developer",
     company: "Dynamic Impact",
     date: "Aug 2025 – Present",
     description:
       "Building full-stack applications with React, Next.js, and Spring Boot. Work includes REST API design and integration with Spring Boot and Express.js, PostgreSQL data modeling, and database access optimization — delivered through an Agile workflow with regular code reviews.",
   },
   {
-    role: "Développeur Front-End",
+    role: "Front-End Developer",
     company: "Digitalia Solutions",
     date: "Apr 2025 – Aug 2025",
     description:
       "Built the InfluMatch platform with React 18 and TypeScript, implementing JWT authentication with role-based user management and creating a reusable UI component library with TailwindCSS and shadcn/ui.",
   },
   {
-    role: "Développeur Web Full-Stack",
+    role: "Full-Stack Web Developer",
     company: "Ocean Connecting",
     date: "Aug 2024 – Mar 2025",
     description:
       "Developed the monpatient medical platform with Next.js, implementing role-based authentication and access control through NextAuth. Managed data across PostgreSQL and MySQL databases.",
   },
   {
-    role: "Développeur Web & Marketing",
+    role: "Web & Marketing Developer",
     company: "Optisent",
     date: "Sep 2023 – Jun 2024",
     description:

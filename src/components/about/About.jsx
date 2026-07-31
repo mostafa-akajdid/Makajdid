@@ -1,27 +1,10 @@
 import "./about.css";
 import { about } from "../../assets/assets";
 
-const HEADING_OPTIONS = [
-  "Software should feel effortless.",
-  "Building products people enjoy using.",
-  "I solve problems, not just write code.",
-  "Good design is invisible.",
-  "Every pixel has a purpose.",
-];
-
 const About = () => {
   return (
     <section className="about" id="about">
       <div className="about__container">
-        <span className="about__label">About</span>
-
-        <h2 className="about__heading">{HEADING_OPTIONS[0]}</h2>
-
-        <p className="about__quote">
-          &ldquo;I don&apos;t just build interfaces. I remove the friction
-          between people and what they&apos;re trying to accomplish.&rdquo;
-        </p>
-
         <div className="about__body">
           <img
             src={about}
@@ -34,36 +17,31 @@ const About = () => {
           />
 
           <div className="about__narrative">
+            <span className="about__label">About</span>
+
+            <h2 className="about__heading">
+              The interface is only part of the product.
+            </h2>
+
             <p className="about__text">
-              I&apos;m a full-stack developer who believes software should serve
-              people, not the other way around. Based in Morocco, I&apos;ve spent
-              years learning what makes digital products actually work — not just
-              compile. I hold an Oracle Certified Professional certification in
-              Java SE 17, and I bring that same depth to every layer of the
-              stack.
-            </p>
-            <p className="about__text">
-              I start with the person using the product, not the technology
-              behind it. Every decision — from layout to API design — is
-              measured against one question: does this make the experience
-              simpler?
-            </p>
-            <p className="about__text">
-              You can expect clear communication, thoughtful code, and a genuine
-              interest in solving the right problem. I work in French
-              (professional) and English (intermediate), and I do my best work
-              with people who care about quality and aren&apos;t afraid to
-              iterate.
+              Most of my professional experience has been on the frontend, but
+              that&apos;s never been the limit of my curiosity. The more I
+              worked on real products, the more interested I became in
+              everything happening behind the interface&mdash;from architecture
+              and APIs to the decisions that shape the final experience.
             </p>
 
-            <div className="about__actions">
-              <a href="#contact" className="about__cta">
-                Get in touch
-                <span className="about__cta-arrow" aria-hidden="true">
-                  &rarr;
-                </span>
-              </a>
-            </div>
+            <p className="about__text">
+              I enjoy working with people who ask questions, share ideas, and
+              care about building the right thing. I don&apos;t try to know
+              everything. I prefer understanding the problem, learning what the
+              project needs, and contributing where I can make the biggest
+              impact.
+            </p>
+
+            <p className="about__proof">
+              Oracle Certified Professional &middot; Java SE 17
+            </p>
           </div>
         </div>
       </div>

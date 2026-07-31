@@ -1,14 +1,14 @@
 # Mostafa Akajdid — Full-Stack Developer Portfolio
 
 ## Links
-- [Homepage](https://akajdidm.vercel.app)
-- [Projects](https://akajdidm.vercel.app/projects)
-- [About](https://akajdidm.vercel.app/#about)
-- [Skills](https://akajdidm.vercel.app/#skills)
-- [Services](https://akajdidm.vercel.app/#services)
-- [Evolution](https://akajdidm.vercel.app/#evolution)
-- [Case Studies](https://akajdidm.vercel.app/#case-studies)
-- [Contact](https://akajdidm.vercel.app/#contact)
+- [Homepage](https://makajdid.vercel.app)
+- [Projects](https://makajdid.vercel.app/projects)
+- [About](https://makajdid.vercel.app/#about)
+- [Skills](https://makajdid.vercel.app/#skills)
+- [Services](https://makajdid.vercel.app/#services)
+- [Evolution](https://makajdid.vercel.app/#evolution)
+- [Case Studies](https://makajdid.vercel.app/#case-studies)
+- [Contact](https://makajdid.vercel.app/#contact)
 
 ## About
 Mostafa Akajdid is a full-stack developer based in Casablanca, Morocco. He specializes in React, Next.js, TypeScript, Spring Boot, and PostgreSQL. He is an Oracle Certified Java SE 17 Developer (OCP).
@@ -29,7 +29,7 @@ Mostafa Akajdid is a full-stack developer based in Casablanca, Morocco. He speci
 - Database modeling and optimization
 
 ## Experience
-- Full-Stack Developer at Dynamic Impact (Aug 2025 – Feb 2026)
+- Full-Stack Developer at Dynamic Impact (Aug 2025 – Present)
 - Front-End Developer at Digitalia Solutions (Apr 2025 – Aug 2025)
 - Full-Stack Web Developer at Ocean Connecting (Aug 2024 – Mar 2025)
 - Web & Marketing Developer at Optisent (Sep 2023 – Jun 2024)
@@ -39,12 +39,12 @@ Mostafa Akajdid is a full-stack developer based in Casablanca, Morocco. He speci
 - Technicien Specialise en Developpement Informatique — ISTA TADDART, Agadir, 2020–2023
 
 ## Projects
-- [Real Estate Platform](https://akajdidm.vercel.app/projects/realstate) — Next.js, Chakra UI, Prisma, PostgreSQL
-- [Glass Ocean](https://akajdidm.vercel.app/projects/glassocean) — Next.js, Material-UI, GSAP, glass morphism design
-- [Piolec](https://akajdidm.vercel.app/projects/piolec) — Next.js, Tailwind CSS, electrical products platform
-- [Monpatient](https://akajdidm.vercel.app/projects/monpatient) — Next.js, Redux Toolkit, Node.js, Fastify, healthcare SaaS
-- [StoryCareer](https://akajdidm.vercel.app/projects/storycareer) — Next.js, Node.js, Tailwind CSS, Clerk, career platform
-- [Gemini](https://akajdidm.vercel.app/projects/gemini) — React, Gemini API, generative AI app
+- [Real Estate Platform](https://makajdid.vercel.app/projects/realstate) — Next.js, Chakra UI, Prisma, PostgreSQL
+- [Glass Ocean](https://makajdid.vercel.app/projects/glassocean) — Next.js, Material-UI, GSAP, glass morphism design
+- [Piolec](https://makajdid.vercel.app/projects/piolec) — Next.js, Tailwind CSS, electrical products platform
+- [Monpatient](https://makajdid.vercel.app/projects/monpatient) — Next.js, Redux Toolkit, Node.js, Fastify, healthcare SaaS
+- [StoryCareer](https://makajdid.vercel.app/projects/storycareer) — Next.js, Node.js, Tailwind CSS, Clerk, career platform
+- [Gemini](https://makajdid.vercel.app/projects/gemini) — React, Gemini API, generative AI app
 
 ## Contact
 - Email: [mostafaakajdid6@gmail.com](mailto:mostafaakajdid6@gmail.com)

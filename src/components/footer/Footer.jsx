@@ -39,6 +39,10 @@ const Footer = () => {
           </a>
         </div>
 
+        <a href="/privacy" className="footer__link footer__privacy">
+          Privacy Policy
+        </a>
+
         <span className="footer__copy">&copy; 2026 Mostafa Akajdid.</span>
       </div>
     </footer>

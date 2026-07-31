@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { profile } from "../../assets/assets";
+import { profile, resume } from "../../assets/assets";
 import "./contact.css";
 
 const Contact = () => {
@@ -113,13 +113,16 @@ const Contact = () => {
         </div>
 
         <div className="contact__card">
+          <span className="contact__eyebrow">Contact</span>
+
           <h3 className="contact__heading">
-            Let&apos;s build something exceptional.
+            Tell me what you&apos;re building.
           </h3>
+
           <p className="contact__text">
-            Whether you&apos;re hiring, building a product, or looking for a
-            technical partner, I&apos;d love to hear what you&apos;re working
-            on.
+            Whether you&apos;re hiring for a full-time role or building a
+            product, a few lines of context are enough to start the
+            conversation.
           </p>
 
           <form
@@ -207,7 +210,7 @@ const Contact = () => {
               disabled={isLoading}
               aria-busy={isLoading}
             >
-              {isLoading ? "Sending..." : "Let's work together"}
+              {isLoading ? "Sending..." : "Send message"}
             </button>
 
             {submitError && (
@@ -218,14 +221,41 @@ const Contact = () => {
 
             {showSuccess && (
               <p className="contact__success-msg" aria-live="polite">
-                ✓ Message sent successfully.
+                Your message has been sent successfully.
               </p>
             )}
-
-            <p className="contact__microcopy">
-              Usually replies within 24 hours.
-            </p>
           </form>
+
+          <div className="contact__email">
+            <span className="contact__email-label">Prefer email?</span>
+            <a
+              href="mailto:mostafaakajdid6@gmail.com"
+              className="contact__email-link"
+            >
+              mostafaakajdid6@gmail.com
+            </a>
+          </div>
+
+          <footer className="contact__footer">
+            <div className="contact__footer-links">
+              <a
+                href={resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact__footer-link"
+                download
+              >
+                Resume
+              </a>
+              <a href="/privacy" className="contact__footer-link">
+                Privacy
+              </a>
+            </div>
+
+            <span className="contact__footer-copy">
+              &copy; 2026 Mostafa Akajdid. All rights reserved.
+            </span>
+          </footer>
         </div>
       </div>
     </section>

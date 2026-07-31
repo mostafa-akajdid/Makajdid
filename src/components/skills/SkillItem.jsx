@@ -1,10 +1,10 @@
 import { memo } from "react";
 
-const SkillItem = memo(({ icon: Icon, name, primary = false }) => (
-  <div className={`skills__item${primary ? " skills__item--primary" : ""}`}>
+const SkillItem = memo(({ icon: Icon, name }) => (
+  <li className="skills__item">
     <Icon className="skills__icon" aria-hidden="true" />
     <span className="skills__name">{name}</span>
-  </div>
+  </li>
 ));
 
 export default SkillItem;

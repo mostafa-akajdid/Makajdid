@@ -122,14 +122,14 @@ export default function ProjectDetail() {
             content="The requested project could not be found. Browse the portfolio of Mostafa Akajdid."
           />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="https://akajdidm.vercel.app/og-image.png" />
+          <meta property="og:image" content="https://makajdid.vercel.app/og-image.png" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="404 — Project Not Found | Mostafa Akajdid" />
           <meta
             name="twitter:description"
             content="The requested project could not be found. Browse the portfolio of Mostafa Akajdid."
           />
-          <meta name="twitter:image" content="https://akajdidm.vercel.app/og-image.png" />
+          <meta name="twitter:image" content="https://makajdid.vercel.app/og-image.png" />
         </Helmet>
         <div className="pe pe--404">
           <div className="pe__404">
@@ -155,16 +155,16 @@ export default function ProjectDetail() {
           name="description"
           content={subtitle}
         />
-        <link rel="canonical" href={`https://akajdidm.vercel.app/projects/${slug}`} />
+        <link rel="canonical" href={`https://makajdid.vercel.app/projects/${slug}`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={subtitle} />
-        <meta property="og:url" content={`https://akajdidm.vercel.app/projects/${slug}`} />
+        <meta property="og:url" content={`https://makajdid.vercel.app/projects/${slug}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://akajdidm.vercel.app/og-image.png" />
+        <meta property="og:image" content="https://makajdid.vercel.app/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={subtitle} />
-        <meta name="twitter:image" content="https://akajdidm.vercel.app/og-image.png" />
+        <meta name="twitter:image" content="https://makajdid.vercel.app/og-image.png" />
       </Helmet>
       <article className="pe">
       {/* Feature 1: Reading progress bar */}

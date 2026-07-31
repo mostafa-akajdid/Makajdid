@@ -22,22 +22,22 @@ const Projects = () => {
           name="description"
           content="A curated selection of digital products designed and built by Mostafa Akajdid. React, Next.js, Spring Boot, PostgreSQL projects."
         />
-        <link rel="canonical" href="https://akajdidm.vercel.app/projects" />
+        <link rel="canonical" href="https://makajdid.vercel.app/projects" />
         <meta property="og:title" content="Projects — Mostafa Akajdid" />
         <meta
           property="og:description"
           content="A curated selection of digital products designed and built by Mostafa Akajdid. React, Next.js, Spring Boot, PostgreSQL projects."
         />
-        <meta property="og:url" content="https://akajdidm.vercel.app/projects" />
+        <meta property="og:url" content="https://makajdid.vercel.app/projects" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://akajdidm.vercel.app/og-image.png" />
+        <meta property="og:image" content="https://makajdid.vercel.app/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Projects — Mostafa Akajdid" />
         <meta
           name="twitter:description"
           content="A curated selection of digital products designed and built by Mostafa Akajdid. React, Next.js, Spring Boot, PostgreSQL projects."
         />
-        <meta name="twitter:image" content="https://akajdidm.vercel.app/og-image.png" />
+        <meta name="twitter:image" content="https://makajdid.vercel.app/og-image.png" />
       </Helmet>
       <Header />
       <main className="main">

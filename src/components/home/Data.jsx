@@ -1,34 +1,29 @@
-import { send } from "../../assets/assets";
-import { TypeAnimation } from "react-type-animation";
-
 const Data = () => {
   return (
     <div className="home__data">
-      <h1 className="home__title">MOSTAFA AKAJDID</h1>
-      <TypeAnimation
-        sequence={[
-          "Full-Stack Developer \u00B7 React \u00B7 Java \u00B7 Spring Boot",
-          4000,
-          "Turning product ideas into production-ready software",
-          3000,
-        ]}
-        cursor={false}
-        wrapper="span"
-        speed={25}
-        className="home__subtitle"
-        repeat={Infinity}
-      />
-      <p className="home__description">
-        I build for the people who use it — and the team that maintains it.
+      <h1 className="home__title">Mostafa Akajdid</h1>
+      <span className="home__subtitle">Full-Stack Developer</span>
+      <p className="home__main-statement">
+        I start with the user experience, then build the architecture that
+        makes it possible.
       </p>
-      <p className="home__description">
-        From concept to production, clarity guides every decision.
+      <p className="home__supporting">
+        From interface decisions to APIs and data flows, I like understanding
+        how every part of the product works together.
       </p>
 
-      <a href="#contact" className="button button--flex">
-        Let&rsquo;s build something
-        <img src={send} alt="send icon" className="button__icon" width="24" height="24" />
-      </a>
+      <div className="home__cta">
+        <a href="#contact" className="button button--flex">
+          Get in Touch
+          <i className="uil uil-arrow-right button__icon"></i>
+        </a>
+        <a href="#case-studies" className="home__cta-secondary">
+          Explore My Work
+          <span className="home__cta-arrow" aria-hidden="true">
+            &rarr;
+          </span>
+        </a>
+      </div>
     </div>
   );
 };

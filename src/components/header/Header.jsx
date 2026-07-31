@@ -6,12 +6,19 @@ import DarkMode from "../DarkMode/DarkMode";
 
 const navItems = [
   { id: "about", name: "About" },
-  { id: "services", name: "Services" },
+  { id: "experience", name: "Experience" },
   { id: "case-studies", name: "Projects" },
   { id: "contact", name: "Contact" },
 ];
 
-const SECTION_IDS = ["home", "about", "skills", "services", "evolution", "case-studies", "contact"];
+const SECTION_IDS = [
+  "home",
+  "about",
+  "experience",
+  "skills",
+  "case-studies",
+  "contact",
+];
 
 const Header = () => {
   const [active, setActive] = useState("");

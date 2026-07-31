@@ -19,32 +19,32 @@ import "./skills.css";
 
 const SKILL_GROUPS = [
   {
-    title: "Technologies I use every day",
+    title: "Core product stack",
     description:
-      "The tools I reach for when building complete products, from interfaces to backend systems.",
+      "The technologies I use to build complete web products, from interfaces and APIs to authentication and data.",
     skills: [
       { name: "React", icon: SiReact },
-      { name: "Next.js", icon: RiNextjsLine },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "shadcn/ui", icon: SiShadcnui },
       { name: "Spring Boot", icon: SiSpringboot },
+      { name: "Next.js", icon: RiNextjsLine },
+      { name: "PostgreSQL", icon: BiLogoPostgresql },
+      { name: "TypeScript", icon: SiTypescript },
       { name: "Node.js / Express", icon: SiNodedotjs },
       { name: "REST APIs", icon: RiCodeLine },
-      { name: "PostgreSQL", icon: BiLogoPostgresql },
       { name: "MySQL", icon: SiMysql },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "shadcn/ui", icon: SiShadcnui },
+      { name: "JWT / NextAuth", icon: SiJsonwebtokens },
     ],
   },
   {
-    title: "How I work",
+    title: "Delivery and collaboration",
     description:
-      "The practices that help software stay reliable, maintainable, and easy to evolve.",
+      "The tools and practices that help the work stay maintainable, reviewable, and ready to ship.",
     skills: [
-      { name: "Git", icon: SiGit, primary: true },
+      { name: "Git", icon: SiGit },
       { name: "GitHub", icon: SiGithub },
-      { name: "Docker", icon: SiDocker, primary: true },
-      { name: "CI/CD", icon: SiGithubactions, primary: true },
-      { name: "JWT / NextAuth", icon: SiJsonwebtokens },
+      { name: "Docker", icon: SiDocker },
+      { name: "GitHub Actions", icon: SiGithubactions },
       { name: "Agile / Scrum", icon: RiLoopLeftLine },
     ],
   },
@@ -61,27 +61,26 @@ const Skills = () => {
         <h2 className="skills__heading">{HEADING}</h2>
 
         <p className="skills__intro">
-          Every product asks different technical questions. I don&apos;t start
-          with a favorite framework — I start with the problem. Once the
-          constraints are clear, choosing the right architecture and technology
-          becomes the easy part.
+          I work across interfaces, backend systems, data, and delivery. The
+          tools change from one product to another, but these are the
+          technologies and practices that shape most of my work.
         </p>
 
         {SKILL_GROUPS.map((group) => (
           <div className="skills__group" key={group.title}>
             <h3 className="skills__group-title">{group.title}</h3>
             <p className="skills__group-description">{group.description}</p>
-            <div className="skills__grid">
+            <ul className="skills__grid">
               {group.skills.map((skill) => (
                 <SkillItem key={skill.name} {...skill} />
               ))}
-            </div>
+            </ul>
           </div>
         ))}
 
         <p className="skills__closing">
-          I don&apos;t aim to know every technology. I aim to become the kind of
-          engineer who can learn any technology when it matters.
+          I do not try to collect tools. I focus on understanding what a product
+          needs and learning what helps me build it well.
         </p>
       </div>
     </section>
