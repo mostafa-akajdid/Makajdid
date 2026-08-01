@@ -4,6 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script>
+      (function () {
+        var stored;
+        try {
+          stored = localStorage.getItem("theme");
+        } catch (e) {
+          stored = null;
+        }
+        if (stored !== "dark" && stored !== "light") {
+          stored = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.setAttribute("data-theme", stored);
+      })();
+    </script>
+
+    <title>Mostafa Akajdid — Full-Stack Developer in Casablanca | React, Next.js, Spring Boot</title>
+    <meta
+      name="description"
+      content="Full-stack developer in Casablanca. React, Next.js, Spring Boot, PostgreSQL. Oracle Java SE 17 OCP. Available for freelance and full-time roles."
+    />
+
+    <meta property="og:title" content="Mostafa Akajdid — Full-Stack Developer in Casablanca" />
+    <meta
+      property="og:description"
+      content="Full-stack developer in Casablanca. React, Next.js, Spring Boot, PostgreSQL. Oracle Java SE 17 OCP. Available for freelance and full-time roles."
+    />
+    <meta property="og:url" content="https://makajdid.vercel.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://makajdid.vercel.app/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mostafa Akajdid — Full-Stack Developer in Casablanca" />
+    <meta
+      name="twitter:description"
+      content="Full-stack developer in Casablanca. React, Next.js, Spring Boot, PostgreSQL. Oracle Java SE 17 OCP. Available for freelance and full-time roles."
+    />
+    <meta name="twitter:image" content="https://makajdid.vercel.app/og-image.png" />
+
     <meta name="author" content="Mostafa Akajdid" />
     <meta name="robots" content="index, follow" />
 

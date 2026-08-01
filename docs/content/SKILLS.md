@@ -109,6 +109,82 @@ Placement unchanged; opacity 0.72; `max-width 560px`; centered. No CTA.
 
 ---
 
+## Approved Skills V1.1 — Final Visual Polish
+
+Approved and implemented. Visual-only refinements; content, group structure, skill order, and the 16-item inventory are unchanged from Approved Skills V1 and remain the single source of truth. This version supersedes the V1 visual values above and is **LOCKED**.
+
+### What changed (visual only)
+
+- Content width reduced to 640px (`max-width: 640px`, `margin-inline: auto`). Outer section padding unchanged.
+- Group hierarchy refined: group titles `0.9375rem`, weight `600`, `line-height 1.3`, `--title-color`, `margin-bottom 8px`, `text-transform none`, `letter-spacing 0`. Group descriptions `opacity 0.68`, `line-height 1.6`, `max-width 520px`, `margin-bottom 20px`.
+- Skill item contrast increased: icon 20px `opacity 0.62`, name `opacity 0.92`, weight `400`, `--text-color`, icon/name gap 12px.
+- List rhythm tightened: two columns on desktop, `column-gap 3rem`, `row-gap 0`, item `padding-block 8px` (9px at ≤576px). No cards.
+- Divider and group spacing refined: `border-top 1px solid rgba(0,0,0,0.08)`, `margin-top 36px`, `padding-top 32px`.
+- Closing copy changed from italic to normal (`font-style: normal`), `opacity 0.68`, `max-width 520px`, `margin 40px auto 0`, `line-height 1.7`, centered.
+- Hover kept opacity-only: on pointer devices icon `0.9`, name `1`, `transition opacity 180ms ease-out`; transitions removed under `prefers-reduced-motion`.
+- Responsive behavior preserved: two-column grid on desktop, two columns with `column-gap 2rem` on tablet, one column at ≤576px with item order preserved and no horizontal overflow. Intro-to-first-group gap 48px desktop / 40px tablet / 32px mobile.
+
+---
+
+## Approved Skills V2 — Editorial Redesign
+
+Approved and implemented. A full layout redesign of the Skills section. Content is unchanged from Approved Skills V1 / V1.1 — heading, intro, group titles, group descriptions, technologies, their order, and the closing copy are identical. Only the layout and visual hierarchy changed. This version supersedes the V1.1 visual values.
+
+### What changed (layout only)
+
+- The two-column settings-style grid is gone. Each group renders as a single flowing column of technology rows — muted icon + name — separated by hairline rules. No cards, no bordered boxes, no chips, no pills, no badges.
+- Container widened from 640px to 720px to match the About / Contact editorial rhythm.
+- Group titles promoted to `--h3-font-size`, preceded by a quiet chapter index (`01`, `02`). Group descriptions stay muted (`--small-font-size`, `opacity 0.68`).
+- Technology names promoted to `--normal-font-size`, weight `500`, `--title-color`; icons demoted to secondary (`20px`, `opacity 0.5`).
+- Vertical rhythm increased: row `padding-block 14px` with a `1px rgba(0,0,0,0.08)` hairline between rows, intro-to-first-group gap `4rem`, inter-group gap `5rem` with a full-width hairline, closing margin `5rem`.
+- Hover remains opacity-only on pointer devices (icon → `0.85`, name → `1`), `transition opacity 180ms ease-out`; transitions removed under `prefers-reduced-motion`.
+- Single column at all breakpoints; item order preserved; no horizontal overflow. Outer section padding and breakpoints unchanged.
+
+### Status
+
+Section:
+
+Skills
+
+State:
+
+IMPLEMENTED — SCREENSHOT REVIEW PENDING
+
+V2 is implemented. Desktop and mobile screenshot review is required before the section may be marked LOCKED again.
+
+---
+
+## Skills V2 — Editorial Split Composition
+
+Approved and implemented. A complete redesign of the Skills section. The current list layout is superseded. Content is unchanged — heading, intro, group titles, group descriptions, technologies, and their exact order are identical. Only layout and visual hierarchy changed.
+
+### What changed (layout only)
+
+- The list layout is superseded by a premium editorial split composition: a strong editorial statement on one side, a controlled technology composition on the other, arranged as two large horizontal bands (`Core product stack`, `Delivery and collaboration`). Each band feels like a chapter.
+- Section width widened to 1040px (`max-width: 1040px`, `margin-inline: auto`); current outer section padding kept; centered heading block capped at `max-width: 720px`. Intro-to-first-band gap 72px desktop / 56px tablet / 40px mobile.
+- Two editorial bands: each has `border-top: 1px solid rgba(0,0,0,0.08)`, `padding-block: 48px`, desktop grid `0.8fr 1.2fr`, `column-gap: 72px`, `align-items: start`. No cards, no backgrounds, no shadows, no rounded rectangles.
+- Left column per band: group number (`0.6875rem`, weight 600, `letter-spacing 0.14em`, opacity `0.38`, margin-bottom `14px`), group title (`clamp(1.25rem, 2vw, 1.625rem)`, weight 600, `--title-color`, margin-bottom `14px`), group description (`--small-font-size`, line-height `1.7`, opacity `0.68`, max-width `300px`).
+- Right column, `Core product stack`: the 11 technologies render as a controlled 3-column text composition (`repeat(3, minmax(0, 1fr))`, `column-gap 32px`, `row-gap 26px`). The final row may contain two items with normal grid placement.
+- Right column, `Delivery and collaboration`: the 5 items render as a controlled 2-column text composition (`repeat(2, minmax(0, 1fr))`, `column-gap 40px`, `row-gap 26px`).
+- Item style: icon above name, icon 22px opacity `0.48`, name below (margin-top `10px`) at `0.9375rem`, weight 500, `--title-color`, default opacity `0.88`. No borders, no dividers, no pills, no cards. Technology names read as editorial labels, not app settings.
+- Refinement: items now render icon and name on the same horizontal line, vertically centered, gap 10px, icon opacity 0.45, name opacity 0.92, hover icon 0.8 / name 1; description-to-composition spacing increased by 24px.
+- Closing sentence removed entirely from the rendered section: *"I do not try to collect tools..."* It was removed because it repeated the heading and intro. The section ends after the second band.
+- Hover opacity-only on pointer devices (icon → `0.82`, name → `1`), `transition opacity 180ms ease-out`; transitions removed under `prefers-reduced-motion`.
+- Responsive: tablet (769–992px) band grid `0.9fr 1.1fr`, `column-gap 44px`, compositions keep their column counts; ≤768px each band becomes one column (left column first, right column below, gap `32px`, band `padding-block 40px`); ≤576px compositions become 2 columns with `column-gap 24px`, `row-gap 24px`; ≤380px both compositions become 1 column with `row-gap 20px`. No horizontal overflow; exact skill order preserved.
+- Accessibility: `h2` section heading, `h3` per band title, `ul` per composition, `li` per technology; icons `aria-hidden="true"` with visible text labels; static items are not focusable.
+
+### Status
+
+Section:
+
+Skills
+
+State:
+
+IMPLEMENTED — SCREENSHOT REVIEW PENDING
+
+---
+
 ## 1. Purpose
 
 The Skills section sits between Experience and Projects. It answers the question the rest of the page poses but does not close: *what can he actually build, and with what?*
@@ -429,4 +505,4 @@ State:
 
 IMPLEMENTED — SCREENSHOT REVIEW PENDING
 
-Approved Skills V1 is implemented. Desktop and mobile screenshot review is required before the section may be marked LOCKED.
+Approved Skills V2 — Editorial Split Composition is implemented. Desktop and mobile screenshot review is required before the section may be marked LOCKED.

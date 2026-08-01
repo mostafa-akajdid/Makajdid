@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, memo } from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { extractColorFromImage } from "../../utils/extractColor";
 
@@ -46,6 +47,15 @@ const CaseStudyCard = ({ slug, title, subtitle, description, stack, image }) => 
       </div>
     </Link>
   );
+};
+
+CaseStudyCard.propTypes = {
+  slug: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+  description: PropTypes.string.isRequired,
+  stack: PropTypes.arrayOf(PropTypes.string).isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default memo(CaseStudyCard);

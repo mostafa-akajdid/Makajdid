@@ -25,8 +25,14 @@ export default function ProjectDetail() {
   const [copied, setCopied] = useState(false)
   const copiedTimer = useRef(null)
   const sectionRefs = useRef([])
+  const lightboxRef = useRef(null)
+  const lastFocusedRef = useRef(null)
 
-  const closeLightbox = useCallback(() => setLightbox(null), [])
+  const closeLightbox = useCallback(() => {
+    setLightbox(null)
+    const opener = lastFocusedRef.current
+    if (opener && typeof opener.focus === "function") opener.focus()
+  }, [])
 
   // Feature 1: Reading progress
   useEffect(() => {
@@ -107,6 +113,48 @@ export default function ProjectDetail() {
     })
   }, [])
 
+  const readTime = useMemo(
+    () => (project ? computeReadingTime(project.story) : 0),
+    [project]
+  )
+
+  // Lightbox focus management: capture the opener and move focus into the dialog
+  useEffect(() => {
+    if (!lightbox) return
+    lastFocusedRef.current = document.activeElement
+    lightboxRef.current?.focus()
+  }, [lightbox])
+
+  // Lightbox focus trap
+  const handleLightboxKeyDown = useCallback((e) => {
+    if (e.key !== "Tab") return
+    const dialog = lightboxRef.current
+    if (!dialog) return
+    const focusables = dialog.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )
+    if (!focusables.length) return
+    const first = focusables[0]
+    const last = focusables[focusables.length - 1]
+    if (e.shiftKey) {
+      if (
+        document.activeElement === first ||
+        !dialog.contains(document.activeElement)
+      ) {
+        e.preventDefault()
+        last.focus()
+      }
+      return
+    }
+    if (
+      document.activeElement === last ||
+      !dialog.contains(document.activeElement)
+    ) {
+      e.preventDefault()
+      first.focus()
+    }
+  }, [])
+
   if (!project) {
     return (
       <>
@@ -145,7 +193,6 @@ export default function ProjectDetail() {
   }
 
   const { title, subtitle, meta, story, technologies, liveUrl, githubUrl, facts, status } = project
-  const readTime = useMemo(() => computeReadingTime(story), [story])
 
   return (
     <>
@@ -238,7 +285,7 @@ export default function ProjectDetail() {
           <img
             src={story[0].image}
             alt={story[0].imageAlt}
-            fetchpriority="high"
+            fetchPriority="high"
             decoding="async"
           />
         </button>
@@ -330,9 +377,12 @@ export default function ProjectDetail() {
         <div
           className="pe__lightbox"
           onClick={closeLightbox}
+          onKeyDown={handleLightboxKeyDown}
           role="dialog"
           aria-modal="true"
           aria-label="Image lightbox"
+          tabIndex={-1}
+          ref={lightboxRef}
         >
           <div className="pe__lightbox-inner" onClick={(e) => e.stopPropagation()}>
             <button

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./caseStudies.css";
 import CaseStudyCard from "./CaseStudyCard";
 import caseStudies from "../../data/caseStudies";
@@ -29,6 +30,10 @@ const CaseStudies = ({ showHeader = true }) => {
       </div>
     </section>
   );
+};
+
+CaseStudies.propTypes = {
+  showHeader: PropTypes.bool,
 };
 
 export default CaseStudies;

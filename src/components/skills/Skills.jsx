@@ -56,32 +56,40 @@ const Skills = () => {
   return (
     <section className="skills" id="skills">
       <div className="skills__container">
-        <span className="skills__label">Skills</span>
+        <div className="skills__intro-block">
+          <span className="skills__label">Skills</span>
 
-        <h2 className="skills__heading">{HEADING}</h2>
+          <h2 className="skills__heading">{HEADING}</h2>
 
-        <p className="skills__intro">
-          I work across interfaces, backend systems, data, and delivery. The
-          tools change from one product to another, but these are the
-          technologies and practices that shape most of my work.
-        </p>
+          <p className="skills__intro">
+            I work across interfaces, backend systems, data, and delivery. The
+            tools change from one product to another, but these are the
+            technologies and practices that shape most of my work.
+          </p>
+        </div>
 
-        {SKILL_GROUPS.map((group) => (
-          <div className="skills__group" key={group.title}>
-            <h3 className="skills__group-title">{group.title}</h3>
-            <p className="skills__group-description">{group.description}</p>
-            <ul className="skills__grid">
+        {SKILL_GROUPS.map((group, groupIndex) => (
+          <div className="skills__band" key={group.title}>
+            <div className="skills__band-info">
+              <span className="skills__band-number">
+                {String(groupIndex + 1).padStart(2, "0")}
+              </span>
+              <h3 className="skills__band-title">{group.title}</h3>
+              <p className="skills__band-description">{group.description}</p>
+            </div>
+            <ul
+              className={`skills__composition ${
+                groupIndex === 0
+                  ? "skills__composition--cols-3"
+                  : "skills__composition--cols-2"
+              }`}
+            >
               {group.skills.map((skill) => (
                 <SkillItem key={skill.name} {...skill} />
               ))}
             </ul>
           </div>
         ))}
-
-        <p className="skills__closing">
-          I do not try to collect tools. I focus on understanding what a product
-          needs and learning what helps me build it well.
-        </p>
       </div>
     </section>
   );

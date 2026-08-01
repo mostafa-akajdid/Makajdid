@@ -1,4 +1,5 @@
 import { memo } from "react";
+import PropTypes from "prop-types";
 
 const ServiceItem = memo(({ icon: Icon, title, description }) => {
   return (
@@ -9,5 +10,13 @@ const ServiceItem = memo(({ icon: Icon, title, description }) => {
     </div>
   );
 });
+
+ServiceItem.displayName = "ServiceItem";
+
+ServiceItem.propTypes = {
+  icon: PropTypes.elementType.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 export default ServiceItem;

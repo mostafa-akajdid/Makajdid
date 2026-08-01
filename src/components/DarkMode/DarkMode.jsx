@@ -16,7 +16,7 @@ const DarkMode = () => {
   const [dark, setDark] = useState(getInitialTheme);
 
   useEffect(() => {
-    document.body.setAttribute("data-theme", dark);
+    document.documentElement.setAttribute("data-theme", dark);
     localStorage.setItem(STORAGE_KEY, dark);
   }, [dark]);
 

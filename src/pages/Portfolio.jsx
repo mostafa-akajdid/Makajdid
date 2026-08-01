@@ -58,8 +58,8 @@ const Portfolio = () => {
         <Suspense fallback={null}>
           <About />
           <Experience />
-          <Skills />
           <CaseStudies />
+          <Skills />
           <Contact />
         </Suspense>
       </main>

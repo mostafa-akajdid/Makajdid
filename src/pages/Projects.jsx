@@ -67,7 +67,7 @@ const Projects = () => {
             <br />
             products and collaborations.
           </p>
-          <Link to="/#contact" className="projects-cta__link">
+          <Link to="/" state={{ scrollTo: "contact" }} className="projects-cta__link">
             Contact Me
             <svg
               className="projects-cta__arrow"
