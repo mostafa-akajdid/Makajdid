@@ -13,17 +13,17 @@ const caseStudies = [
     slug: "realstate",
     title: "Real Estate Platform",
     subtitle:
-      "A full-stack property marketplace built for modern real estate — search, filter, and connect with ease.",
+      "A full-stack real estate platform for browsing properties and managing listings, details, images, availability, and reservations from a secured dashboard.",
     description:
-      "Full-stack property marketplace with advanced search and user authentication.",
+      "A production-ready real estate platform with property discovery, secured administration, reservations, and a separated frontend/backend architecture.",
     image: realstate,
-    stack: ["Next.js", "Chakra UI", "Prisma", "PostgreSQL"],
-    liveUrl: null,
+    stack: ["Next.js", "Prisma", "PostgreSQL", "Cloudinary"],
+    liveUrl: "https://realstat-eta.vercel.app",
     githubUrl: null,
     meta: {
       role: "Full-Stack Development",
-      duration: "2 Months",
-      year: "2024",
+      duration: "2024–2026",
+      year: "2026",
       type: "Web Application",
     },
     facts: {
@@ -37,38 +37,42 @@ const caseStudies = [
       {
         title: "The Problem",
         text: [
-          "Finding a property online should feel simple. Most platforms, however, overwhelm users with cluttered interfaces, slow search, and fragmented listing data. The experience feels outdated — more like a database dump than a tool designed for people.",
-          "The challenge was clear: build a marketplace where searching for a home feels effortless. Fast results, clean presentation, and a path from browsing to contacting that requires almost no thought.",
+          "Property discovery and property management were split across disconnected workflows. Visitors needed a clear way to browse and filter listings, while administrators needed one place to manage property data, images, availability, and reservations.",
+          "The first version also kept the public website, API, database access, authentication, and media logic in the same application. As the project grew, that structure became harder to maintain and deploy safely.",
         ],
         image: realstate,
-        imageAlt: "Real Estate Platform showing property listings",
+        imageAlt:
+          "Real Estate Platform properties page with search filters and property listings",
       },
       {
         title: "The Approach",
         text: [
-          "Search was the starting point. It's the most common action on any real estate platform, so every other feature was designed to support it — not compete with it. Filtering by location, price, and type had to feel instant.",
-          "The interface was kept deliberately minimal. Large property cards, clear pricing, and map integration. Users can move from browsing to contacting an agent in three taps, with no dead ends or confusing detours.",
+          "I separated the product into two focused applications: a frontend-only public website and a secured dashboard that owns the API, authentication, database access, and Cloudinary operations.",
+          "The migration was completed step by step—read routes, listing and detail management, JWT protection, reservations, consumer cutover, and production deployment—without changing the existing database schema or interrupting the live data.",
         ],
         image: realstate,
-        imageAlt: "Real Estate Platform search and filter interface",
+        imageAlt:
+          "Real Estate Platform dashboard for managing property listings",
       },
       {
         title: "The Outcome",
         text: [
-          "The platform delivers a calm, focused browsing experience. Property pages load instantly, search results update in real time, and the overall feel is trustworthy without being sterile.",
-          "Built on Next.js for performance, Prisma for type-safe data access, and PostgreSQL for reliability — a stack chosen for longevity, not trends.",
+          "Visitors can now search, filter, and explore properties with images, structured details, map data, and sharing links. Administrators can manage listings, property details, availability, media, and reservations from one protected dashboard.",
+          "The final production setup uses Next.js, Prisma, PostgreSQL, Cloudinary, JWT authentication, and Vercel, with the public website and dashboard connected through a dedicated backend API.",
         ],
         image: realstate,
-        imageAlt: "Real Estate Platform property detail view",
+        imageAlt:
+          "Real Estate Platform property detail view with images, specifications, and map data",
       },
     ],
     technologies: [
       "Next.js",
-      "Chakra UI",
       "Prisma",
       "PostgreSQL",
       "REST API",
-      "Authentication",
+      "JWT Authentication",
+      "Cloudinary",
+      "Vercel",
       "Responsive Design",
     ],
   },
