@@ -204,17 +204,17 @@ const caseStudies = [
     slug: "monpatient",
     title: "MonPatient",
     subtitle:
-      "A digital platform designed to simplify healthcare management — connecting patients with providers through a seamless, intuitive experience.",
+      "A multi-role healthcare platform connecting patients, doctors, nurses, pharmacies, and administrators through one coordinated digital experience.",
     description:
-      "Healthcare platform for home visits, prescriptions, and medical coordination.",
+      "A full-stack healthcare platform for patient care, professional coordination, medical records, prescriptions, notifications, and secure role-based access.",
     image: monpatient,
-    stack: ["Next.js", "Redux Toolkit", "Node.js", "PostgreSQL"],
-    liveUrl: null,
+    stack: ["React", "Fastify", "Prisma", "PostgreSQL"],
+    liveUrl: "https://monpatient-kappa.vercel.app",
     githubUrl: null,
     meta: {
       role: "Full-Stack Development",
-      duration: "3 Months",
-      year: "2025",
+      duration: "2025–2026",
+      year: "2026",
       type: "Web Application",
     },
     facts: {
@@ -228,38 +228,47 @@ const caseStudies = [
       {
         title: "The Problem",
         text: [
-          "Healthcare systems often burden patients with fragmented tools — separate portals for appointments, records, and communication. The experience feels clinical, disconnected, and unnecessarily complex for people who just need care.",
-          "The goal was to rethink this from the patient's perspective. One place to manage everything. No friction, no confusion, no learning curve.",
+          "Healthcare coordination often relies on disconnected tools for patient profiles, care requests, medical records, prescriptions, and communication. This makes it difficult for patients and healthcare professionals to follow the same care journey.",
+          "The project needed one role-based platform where patients, doctors, nurses, pharmacies, and administrators could access the information and actions relevant to them without sharing the same interface or permissions.",
         ],
         image: monpatient,
-        imageAlt: "MonPatient interface showing the patient dashboard",
+        imageAlt:
+          "MonPatient registration and role-based access experience",
       },
       {
         title: "The Approach",
         text: [
-          "We started with the simplest possible flow: a patient opens the app and immediately sees what matters. Appointments, messages, documents — presented clearly without navigating through layers of menus.",
-          "Every interaction was designed to feel effortless. Scheduling requires two taps. Messages appear in a clean, chronological feed. Medical records are organized by visit, not scattered across disconnected files.",
+          "I built the product as a React frontend connected to a Fastify backend, with JWT authentication, role guards, Prisma, and PostgreSQL. Each role receives a dedicated dashboard and protected workflows based on its responsibilities.",
+          "The working core includes registration, login, profile completion, doctor–patient requests, nurse service requests, medical records, prescriptions, notifications, chat, document uploads, and responsive dashboards. Modules planned for later versions remain visible through honest Coming Soon states instead of broken pages.",
         ],
         image: monpatient,
-        imageAlt: "MonPatient appointment scheduling interface",
+        imageAlt:
+          "MonPatient healthcare dashboard with role-based navigation and patient workflows",
       },
       {
         title: "The Outcome",
         text: [
-          "The final product is a calm, focused application that puts patients in control. No unnecessary features, no visual noise — just the tools people need, presented with care.",
-          "Performance was a priority from the start. Pages load instantly, transitions feel native, and the experience remains smooth even on older devices. Healthcare software should feel this way.",
+          "MonPatient is deployed as a presentation-ready healthcare platform where users can register, complete their profile, access the correct dashboard, and use the implemented care and communication workflows without encountering blank pages or broken actions.",
+          "The final system uses a responsive React interface, a secured Fastify REST API, PostgreSQL data persistence, Cloudinary document storage, email verification, and production deployments on Vercel.",
         ],
         image: monpatient,
-        imageAlt: "MonPatient medical records view",
+        imageAlt:
+          "MonPatient patient profile with healthcare and emergency information",
       },
     ],
     technologies: [
-      "Next.js",
+      "React",
+      "TypeScript",
+      "Vite",
       "Redux Toolkit",
-      "Node.js",
+      "Fastify",
+      "Prisma",
       "PostgreSQL",
       "REST API",
-      "JWT Auth",
+      "JWT Authentication",
+      "Cloudinary",
+      "WebSocket",
+      "Vercel",
       "Responsive Design",
     ],
   },
@@ -268,62 +277,81 @@ const caseStudies = [
     slug: "storycareer",
     title: "StoryCareer",
     subtitle:
-      "An AI-powered career platform that helps creative professionals build their narrative and find opportunities.",
+      "A storytelling platform where professionals share real career journeys to inspire, guide, and help others navigate their own path.",
+  
     description:
-      "Career platform with tips and success stories for professional growth.",
+      "A community-driven platform for discovering, publishing, and saving authentic career stories.",
+  
     image: StoryCareer,
-    stack: ["Next.js", "Node.js", "Tailwind CSS", "Clerk"],
-    liveUrl: null,
-    githubUrl: null,
+  
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Clerk"
+    ],
+  
+    liveUrl: "https://storycareer-six.vercel.app",
+    githubUrl: "https://github.com/akajdid-mostafa/storycareer",
+  
     meta: {
       role: "Full-Stack Development",
       duration: "2 Months",
       year: "2025",
       type: "Web Application",
     },
+  
     facts: {
       industry: "Career Development",
       platform: "Web",
       responsive: "Yes",
       team: "Solo",
     },
+  
     status: "Personal Project",
+  
     story: [
       {
         title: "The Problem",
         text: [
-          "Career advice is everywhere — but it's generic, disconnected, and rarely actionable. Creative professionals need guidance that understands their unique path, not corporate templates applied to creative work.",
-          "The challenge was to build a platform where career growth feels personal. Tailored advice, real stories, and tools that adapt to individual goals rather than imposing a one-size-fits-all framework.",
+          "Most career advice online comes in the form of generic articles, motivational posts, or unrealistic success stories. What people often need instead is honesty — learning how others faced setbacks, changed careers, solved problems, and eventually found their path.",
+          "The challenge was to create a platform where professionals can share authentic career experiences, giving students and early-career professionals practical insights they can actually relate to."
         ],
         image: StoryCareer,
-        imageAlt: "StoryCareer platform dashboard",
+        imageAlt: "StoryCareer homepage featuring real career stories",
       },
+  
       {
         title: "The Approach",
         text: [
-          "The platform centers on storytelling — real career journeys from real professionals. AI-powered recommendations surface relevant opportunities based on skills, interests, and career stage, not just job titles.",
-          "The interface was kept clean and focused. No cluttered dashboards, no overwhelming metrics. Just the next step in your career, presented clearly — with enough context to act on it immediately.",
+          "StoryCareer was designed around one core idea: people learn best from other people's experiences. Users can discover stories by industry, publish their own journey, save inspiring stories, and build a personal reading collection.",
+          "The interface stays intentionally simple. The focus is always on the content itself, making reading comfortable and distraction-free while encouraging meaningful contributions from the community."
         ],
         image: StoryCareer,
-        imageAlt: "StoryCareer AI-powered recommendations",
+        imageAlt: "StoryCareer story reading experience",
       },
+  
       {
         title: "The Outcome",
         text: [
-          "StoryCareer delivers personalized career guidance in a calm, focused environment. The AI recommendations feel relevant rather than generic, and the platform adapts as users grow and their goals evolve.",
-          "Built with Clerk for seamless authentication, Tailwind CSS for consistent styling, and Node.js for a reliable backend — chosen for stability over novelty.",
+          "The final product delivers a clean publishing and reading experience with secure authentication, responsive design, SEO-friendly architecture, and a scalable foundation for a growing community of career stories.",
+          "Built with Next.js, Prisma, PostgreSQL, and Clerk, the platform prioritizes simplicity, performance, and maintainability over unnecessary complexity."
         ],
         image: StoryCareer,
-        imageAlt: "StoryCareer career journey view",
+        imageAlt: "StoryCareer story publishing interface",
       },
     ],
+  
     technologies: [
       "Next.js",
-      "Node.js",
-      "Tailwind CSS",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
       "Clerk",
-      "AI Integration",
+      "Server Actions",
       "Responsive Design",
+      "SEO Optimization",
     ],
   },
   {
