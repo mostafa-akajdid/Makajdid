@@ -355,67 +355,92 @@ const caseStudies = [
     ],
   },
   {
-    id: 6,
-    slug: "gemini",
-    title: "Gemini",
-    subtitle:
-      "A generative AI application built for clarity — clean interface, instant responses, and thoughtful state management.",
-    description:
-      "Generative AI application with efficient state management via Context API.",
-    image: gemini,
-    stack: ["React", "Gemini API", "Context API"],
-    liveUrl: null,
-    githubUrl: null,
-    meta: {
-      role: "Frontend Development",
-      duration: "3 Weeks",
-      year: "2024",
-      type: "Web Application",
-    },
-    facts: {
-      industry: "Artificial Intelligence",
-      platform: "Web",
-      responsive: "Yes",
-      team: "Solo",
-    },
-    status: "Personal Project",
-    story: [
-      {
-        title: "The Problem",
-        text: [
-          "Most AI chat interfaces feel cluttered — sidebars, settings panels, and overwhelming options distract from the core experience: asking a question and getting a clear answer. The technology is impressive; the interfaces often aren't.",
-          "The goal was to strip away everything unnecessary and build an AI interface that feels instant, clean, and focused on the conversation.",
-        ],
-        image: gemini,
-        imageAlt: "Gemini AI interface showing clean chat view",
-      },
-      {
-        title: "The Approach",
-        text: [
-          "The design centers on the conversation itself. A single input field, a clean response area, and nothing else. History is accessible but never intrusive — it supports the flow without interrupting it.",
-          "Context API was used for state management — conversation history, loading states, and error handling all flow through a single, predictable store. No heavy libraries, no unnecessary abstraction.",
-        ],
-        image: gemini,
-        imageAlt: "Gemini conversation flow",
-      },
-      {
-        title: "The Outcome",
-        text: [
-          "The application feels instant. Responses stream in smoothly, the interface stays calm regardless of conversation length, and the overall experience keeps focus on the content — not the tool.",
-          "Built with React and Context API for lightweight, predictable state. A reminder that the best architecture is often the simplest one that works.",
-        ],
-        image: gemini,
-        imageAlt: "Gemini responsive design across devices",
-      },
-    ],
-    technologies: [
-      "React",
-      "Gemini API",
-      "Context API",
-      "CSS Custom Properties",
-      "Responsive Design",
-    ],
+  id: 6,
+  slug: "translated",
+  title: "Translated",
+  subtitle:
+    "A production-ready document translation platform that streamlines client requests, pricing, order tracking, and administrative workflow.",
+
+  description:
+    "Full-stack translation management platform with automated pricing, secure document handling, client tracking, and admin dashboard.",
+
+  image: gemini,
+  stack: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Prisma",
+    "PostgreSQL",
+    "Cloudinary",
+    "Tailwind CSS",
+    "Shadcn UI",
+  ],
+
+  liveUrl: null,
+  githubUrl: null,
+
+  meta: {
+    role: "Full Stack Development",
+    duration: "6 Weeks",
+    year: "2026",
+    type: "Web Platform",
   },
+
+  facts: {
+    industry: "Translation Services",
+    platform: "Web",
+    responsive: "Yes",
+    team: "Solo",
+  },
+
+  status: "Production Ready",
+
+  story: [
+    {
+      title: "The Problem",
+      text: [
+        "Traditional translation agencies often rely on email, spreadsheets, and manual communication to receive documents, estimate prices, and track project progress. This creates unnecessary delays, repetitive work, and little transparency for clients.",
+        "The objective was to build a complete platform where clients could upload documents, receive automatic pricing, submit requests, track progress in real time, and download completed translations from a single interface.",
+      ],
+      image: gemini,
+      imageAlt: "Client document upload interface",
+    },
+
+    {
+      title: "The Approach",
+      text: [
+        "The platform was designed around two connected experiences: a public client portal and a secure administrative dashboard. Clients can upload documents, calculate pricing instantly, submit translation requests, and follow each order using a unique tracking ID.",
+        "On the administrative side, translators manage incoming requests, upload completed files, update project status, and securely deliver translated documents. Prisma manages database access while Cloudinary handles document storage, providing a reliable workflow from submission to delivery.",
+      ],
+      image: gemini,
+      imageAlt: "Admin dashboard managing translation requests",
+    },
+
+    {
+      title: "The Outcome",
+      text: [
+        "The final application delivers a complete end-to-end workflow covering document submission, pricing, request management, status tracking, secure downloads, and administrative operations. Every stage of the translation process is centralized into a single system.",
+        "The project was built with scalability and maintainability in mind, using modern full-stack architecture, strong validation, secure file handling, and responsive design to provide a production-ready user experience.",
+      ],
+      image: gemini,
+      imageAlt: "Translated platform running across desktop and mobile",
+    },
+  ],
+
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Prisma ORM",
+    "PostgreSQL",
+    "Cloudinary",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "REST API",
+  ],
+},
 ];
 
 export default caseStudies;
