@@ -192,7 +192,7 @@ export default function ProjectDetail() {
     )
   }
 
-  const { title, subtitle, meta, story, technologies, liveUrl, githubUrl, facts, status } = project
+  const { image ,title, subtitle, meta, story, technologies, liveUrl, githubUrl, facts, status } = project
 
   return (
     <>
@@ -279,12 +279,12 @@ export default function ProjectDetail() {
       <figure className="pe__hero-image">
         <button
           className="pe__image-btn"
-          onClick={() => setLightbox({ src: story[0].image, alt: story[0].imageAlt })}
+          onClick={() => setLightbox({ src: image , alt: title })}
           aria-label="Open image in lightbox"
         >
           <img
-            src={story[0].image}
-            alt={story[0].imageAlt}
+            src={image}
+            alt={title}
             fetchPriority="high"
             decoding="async"
           />

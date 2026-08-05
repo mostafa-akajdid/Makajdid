@@ -5,6 +5,22 @@ import {
   gemini,
   monpatient,
   StoryCareer,
+  Herohala,
+  Problemhala,
+  Approachhala,
+  Outcomehala,
+  herostory,
+  Problemstory,
+  Approachstory,
+  Outcomestory,
+  herorealestat,
+  Outcomerealestat,
+  Approachrealestat,
+  problemrealestat,
+  Heromonpatient,
+  Problemmonpatient,
+  Approachmonpatient,
+  Outcomemonpatient,
 } from "../assets/projects";
 
 const caseStudies = [
@@ -16,7 +32,7 @@ const caseStudies = [
       "A full-stack real estate platform for browsing properties and managing listings, details, images, availability, and reservations from a secured dashboard.",
     description:
       "A production-ready real estate platform with property discovery, secured administration, reservations, and a separated frontend/backend architecture.",
-    image: realstate,
+    image: herorealestat,
     stack: ["Next.js", "Prisma", "PostgreSQL", "Cloudinary"],
     liveUrl: "https://realstat-eta.vercel.app",
     githubUrl: null,
@@ -40,7 +56,7 @@ const caseStudies = [
           "Property discovery and property management were split across disconnected workflows. Visitors needed a clear way to browse and filter listings, while administrators needed one place to manage property data, images, availability, and reservations.",
           "The first version also kept the public website, API, database access, authentication, and media logic in the same application. As the project grew, that structure became harder to maintain and deploy safely.",
         ],
-        image: realstate,
+        image: problemrealestat,
         imageAlt:
           "Real Estate Platform properties page with search filters and property listings",
       },
@@ -50,7 +66,7 @@ const caseStudies = [
           "I separated the product into two focused applications: a frontend-only public website and a secured dashboard that owns the API, authentication, database access, and Cloudinary operations.",
           "The migration was completed step by step—read routes, listing and detail management, JWT protection, reservations, consumer cutover, and production deployment—without changing the existing database schema or interrupting the live data.",
         ],
-        image: realstate,
+        image: Approachrealestat,
         imageAlt:
           "Real Estate Platform dashboard for managing property listings",
       },
@@ -60,7 +76,7 @@ const caseStudies = [
           "Visitors can now search, filter, and explore properties with images, structured details, map data, and sharing links. Administrators can manage listings, property details, availability, media, and reservations from one protected dashboard.",
           "The final production setup uses Next.js, Prisma, PostgreSQL, Cloudinary, JWT authentication, and Vercel, with the public website and dashboard connected through a dedicated backend API.",
         ],
-        image: realstate,
+        image: Outcomerealestat,
         imageAlt:
           "Real Estate Platform property detail view with images, specifications, and map data",
       },
@@ -207,7 +223,7 @@ const caseStudies = [
       "A multi-role healthcare platform connecting patients, doctors, nurses, pharmacies, and administrators through one coordinated digital experience.",
     description:
       "A full-stack healthcare platform for patient care, professional coordination, medical records, prescriptions, notifications, and secure role-based access.",
-    image: monpatient,
+    image: Heromonpatient,
     stack: ["React", "Fastify", "Prisma", "PostgreSQL"],
     liveUrl: "https://monpatient-kappa.vercel.app",
     githubUrl: null,
@@ -231,7 +247,7 @@ const caseStudies = [
           "Healthcare coordination often relies on disconnected tools for patient profiles, care requests, medical records, prescriptions, and communication. This makes it difficult for patients and healthcare professionals to follow the same care journey.",
           "The project needed one role-based platform where patients, doctors, nurses, pharmacies, and administrators could access the information and actions relevant to them without sharing the same interface or permissions.",
         ],
-        image: monpatient,
+        image: Problemmonpatient,
         imageAlt:
           "MonPatient registration and role-based access experience",
       },
@@ -241,7 +257,7 @@ const caseStudies = [
           "I built the product as a React frontend connected to a Fastify backend, with JWT authentication, role guards, Prisma, and PostgreSQL. Each role receives a dedicated dashboard and protected workflows based on its responsibilities.",
           "The working core includes registration, login, profile completion, doctor–patient requests, nurse service requests, medical records, prescriptions, notifications, chat, document uploads, and responsive dashboards. Modules planned for later versions remain visible through honest Coming Soon states instead of broken pages.",
         ],
-        image: monpatient,
+        image: Approachmonpatient,
         imageAlt:
           "MonPatient healthcare dashboard with role-based navigation and patient workflows",
       },
@@ -251,7 +267,7 @@ const caseStudies = [
           "MonPatient is deployed as a presentation-ready healthcare platform where users can register, complete their profile, access the correct dashboard, and use the implemented care and communication workflows without encountering blank pages or broken actions.",
           "The final system uses a responsive React interface, a secured Fastify REST API, PostgreSQL data persistence, Cloudinary document storage, email verification, and production deployments on Vercel.",
         ],
-        image: monpatient,
+        image: Outcomemonpatient,
         imageAlt:
           "MonPatient patient profile with healthcare and emergency information",
       },
@@ -282,7 +298,7 @@ const caseStudies = [
     description:
       "A community-driven platform for discovering, publishing, and saving authentic career stories.",
   
-    image: StoryCareer,
+    image: herostory,
   
     stack: [
       "Next.js",
@@ -318,7 +334,7 @@ const caseStudies = [
           "Most career advice online comes in the form of generic articles, motivational posts, or unrealistic success stories. What people often need instead is honesty — learning how others faced setbacks, changed careers, solved problems, and eventually found their path.",
           "The challenge was to create a platform where professionals can share authentic career experiences, giving students and early-career professionals practical insights they can actually relate to."
         ],
-        image: StoryCareer,
+        image: Problemstory,
         imageAlt: "StoryCareer homepage featuring real career stories",
       },
   
@@ -328,7 +344,7 @@ const caseStudies = [
           "StoryCareer was designed around one core idea: people learn best from other people's experiences. Users can discover stories by industry, publish their own journey, save inspiring stories, and build a personal reading collection.",
           "The interface stays intentionally simple. The focus is always on the content itself, making reading comfortable and distraction-free while encouraging meaningful contributions from the community."
         ],
-        image: StoryCareer,
+        image: Approachstory,
         imageAlt: "StoryCareer story reading experience",
       },
   
@@ -338,7 +354,7 @@ const caseStudies = [
           "The final product delivers a clean publishing and reading experience with secure authentication, responsive design, SEO-friendly architecture, and a scalable foundation for a growing community of career stories.",
           "Built with Next.js, Prisma, PostgreSQL, and Clerk, the platform prioritizes simplicity, performance, and maintainability over unnecessary complexity."
         ],
-        image: StoryCareer,
+        image: Outcomestory,
         imageAlt: "StoryCareer story publishing interface",
       },
     ],
@@ -356,15 +372,18 @@ const caseStudies = [
   },
   {
   id: 6,
-  slug: "translated",
-  title: "Translated",
+  slug: "halatranslat",
+
+  title: "Hala Translat",
+
   subtitle:
-    "A production-ready document translation platform that streamlines client requests, pricing, order tracking, and administrative workflow.",
+    "A production-ready document translation platform that simplifies document submission, automated pricing, order tracking, and secure delivery.",
 
   description:
-    "Full-stack translation management platform with automated pricing, secure document handling, client tracking, and admin dashboard.",
+    "End-to-end translation management platform with client portal, administrative dashboard, automated pricing engine, secure file management, and order tracking.",
 
-  image: gemini,
+  image: Herohala,
+
   stack: [
     "Next.js",
     "React",
@@ -375,16 +394,17 @@ const caseStudies = [
     "Cloudinary",
     "Tailwind CSS",
     "Shadcn UI",
+    "Vercel",
   ],
 
-  liveUrl: null,
+  liveUrl: "https://translate-front-beta.vercel.app/",
   githubUrl: null,
 
   meta: {
-    role: "Full Stack Development",
+    role: "Full Stack Engineer",
     duration: "6 Weeks",
     year: "2026",
-    type: "Web Platform",
+    type: "Production Web Platform",
   },
 
   facts: {
@@ -394,37 +414,37 @@ const caseStudies = [
     team: "Solo",
   },
 
-  status: "Production Ready",
+  status: "Production Deployment",
 
   story: [
     {
       title: "The Problem",
       text: [
-        "Traditional translation agencies often rely on email, spreadsheets, and manual communication to receive documents, estimate prices, and track project progress. This creates unnecessary delays, repetitive work, and little transparency for clients.",
-        "The objective was to build a complete platform where clients could upload documents, receive automatic pricing, submit requests, track progress in real time, and download completed translations from a single interface.",
+        "Translation agencies often manage requests through emails, messaging apps, and spreadsheets. Price estimation, document delivery, and project tracking are handled manually, making the process slow and difficult to scale.",
+        "The objective was to build a complete platform where clients could upload documents, receive instant pricing, submit translation requests, track progress, and securely download completed files without relying on manual communication.",
       ],
-      image: gemini,
-      imageAlt: "Client document upload interface",
+      image: Problemhala,
+      imageAlt: "Hala Translat document upload interface",
     },
 
     {
-      title: "The Approach",
+      title: "The Solution",
       text: [
-        "The platform was designed around two connected experiences: a public client portal and a secure administrative dashboard. Clients can upload documents, calculate pricing instantly, submit translation requests, and follow each order using a unique tracking ID.",
-        "On the administrative side, translators manage incoming requests, upload completed files, update project status, and securely deliver translated documents. Prisma manages database access while Cloudinary handles document storage, providing a reliable workflow from submission to delivery.",
+        "The platform provides two connected experiences: a public client portal and a secure administrative dashboard. Clients upload documents, receive automatic price calculations, submit requests, and monitor every stage of the translation process using a unique tracking ID.",
+        "Administrators manage incoming requests, review uploaded files, update order status, upload translated documents, and securely deliver completed work. Prisma handles database operations while Cloudinary manages document storage and delivery.",
       ],
-      image: gemini,
-      imageAlt: "Admin dashboard managing translation requests",
+      image: Approachhala,
+      imageAlt: "Hala Translat translation management dashboard",
     },
 
     {
-      title: "The Outcome",
+      title: "The Result",
       text: [
-        "The final application delivers a complete end-to-end workflow covering document submission, pricing, request management, status tracking, secure downloads, and administrative operations. Every stage of the translation process is centralized into a single system.",
-        "The project was built with scalability and maintainability in mind, using modern full-stack architecture, strong validation, secure file handling, and responsive design to provide a production-ready user experience.",
+        "The final platform delivers a complete workflow from document upload to secure delivery. Automatic pricing, request tracking, status management, file replacement, and protected downloads work together in a production-ready application.",
+        "The project demonstrates full-stack architecture, secure backend development, API design, database modeling, file storage integration, authentication, responsive UI, and deployment on Vercel.",
       ],
-      image: gemini,
-      imageAlt: "Translated platform running across desktop and mobile",
+      image: Outcomehala,
+      imageAlt: "Hala Translat platform across desktop and mobile devices",
     },
   ],
 
@@ -436,9 +456,10 @@ const caseStudies = [
     "Prisma ORM",
     "PostgreSQL",
     "Cloudinary",
+    "REST API",
     "Tailwind CSS",
     "Shadcn UI",
-    "REST API",
+    "Vercel",
   ],
 },
 ];
