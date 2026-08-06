@@ -20,9 +20,13 @@ import Heromonpatient from "./Project/monpatient/Heromonpatient.webp";
 import Problemmonpatient  from "./Project/monpatient/Problemmonpatinet.webp";
 import Approachmonpatient from "./Project/monpatient/Approachmonpatient.webp";
 import Outcomemonpatient from "./Project/monpatient/Outcomemonpatient.webp";
+import HeroPiolec from "./Project/Piolec/HeroPiolec.webp";
+import ProblemPiolec  from "./Project/Piolec/ProblemPiolec.webp";
+import ApproachPiolec from "./Project/Piolec/ApproachPiolec.webp";
+import OutcomePiolec from "./Project/Piolec/OutcomePiolec.webp";
 
 
-export {gemini,realstate,glassOcean,piolecImage,monpatient,StoryCareer,Herohala,Problemhala ,Approachhala,Outcomehala ,herostory,Problemstory,Approachstory,Outcomestory,herorealestat,Outcomerealestat,Approachrealestat,problemrealestat,Heromonpatient,Problemmonpatient,Approachmonpatient,Outcomemonpatient}; 
+export {gemini,realstate,glassOcean,piolecImage,monpatient,StoryCareer,Herohala,Problemhala ,Approachhala,Outcomehala ,herostory,Problemstory,Approachstory,Outcomestory,herorealestat,Outcomerealestat,Approachrealestat,problemrealestat,Heromonpatient,Problemmonpatient,Approachmonpatient,Outcomemonpatient,HeroPiolec,ProblemPiolec,ApproachPiolec,OutcomePiolec}; 
 export const projectImages = {
     gemini,
     realstate,
@@ -46,4 +50,8 @@ export const projectImages = {
     Problemmonpatient,
     Approachmonpatient,
     Outcomemonpatient,
+    HeroPiolec,
+    ProblemPiolec,
+    ApproachPiolec,
+    OutcomePiolec
   };

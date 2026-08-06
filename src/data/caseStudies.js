@@ -21,6 +21,10 @@ import {
   Problemmonpatient,
   Approachmonpatient,
   Outcomemonpatient,
+  HeroPiolec,
+  ProblemPiolec,
+  ApproachPiolec,
+  OutcomePiolec
 } from "../assets/projects";
 
 const caseStudies = [
@@ -155,66 +159,109 @@ const caseStudies = [
     ],
   },
   {
-    id: 3,
-    slug: "piolec",
-    title: "Piolec",
-    subtitle:
-      "An electrical products catalog built for clarity — navigate hundreds of products without friction.",
-    description:
-      "Electrical products catalog with intuitive UI and seamless navigation.",
-    image: piolecImage,
-    stack: ["Next.js", "Tailwind CSS", "JavaScript"],
-    liveUrl: null,
-    githubUrl: null,
-    meta: {
-      role: "Frontend Development",
-      duration: "1 Month",
-      year: "2024",
-      type: "Web Application",
-    },
-    facts: {
-      industry: "Industrial",
-      platform: "Web",
-      responsive: "Yes",
-      team: "Solo",
-    },
-    status: "Client Work",
-    story: [
-      {
-        title: "The Problem",
-        text: [
-          "Industrial product catalogs are notoriously difficult to navigate. Hundreds of SKUs, dense technical specifications, and categories that make sense to engineers but leave buyers lost. The information is there — the experience isn't.",
-          "The objective was to build a catalog where finding the right product takes seconds, not minutes. Clarity over complexity.",
-        ],
-        image: piolecImage,
-        imageAlt: "Piolec product catalog interface",
-      },
-      {
-        title: "The Approach",
-        text: [
-          "Products were organized by category with persistent sidebar navigation, so context is never lost. Each product page presents specifications with clean hierarchy — no walls of text, no buried details.",
-          "Search was designed to be forgiving. Partial matches, tolerance for typos, and instant results. The interface stays clean whether displaying ten products or ten hundred.",
-        ],
-        image: piolecImage,
-        imageAlt: "Piolec product detail and navigation",
-      },
-      {
-        title: "The Outcome",
-        text: [
-          "The catalog handles its full product range without feeling heavy. Navigation is seamless, search is instant, and the overall experience communicates professionalism and reliability.",
-          "Tailwind CSS enabled rapid, consistent styling across every product category. The result is a catalog that scales gracefully as the product line grows.",
-        ],
-        image: piolecImage,
-        imageAlt: "Piolec catalog search results",
-      },
-    ],
-    technologies: [
-      "Next.js",
-      "Tailwind CSS",
-      "JavaScript",
-      "Responsive Design",
-    ],
+  id: 3,
+  slug: "piolec",
+
+  title: "Piolec",
+
+  subtitle:
+    "A full-stack corporate website and custom content management system built for an electrical engineering company.",
+
+  description:
+    "Live client platform combining a responsive corporate website with a secure administration dashboard for managing projects, blog content, media, users, and published information.",
+
+  image: HeroPiolec,
+
+  stack: [
+    "Next.js",
+    "JavaScript",
+    "Tailwind CSS",
+    "REST API",
+    "Custom CMS",
+  ],
+
+  liveUrl: "https://piolec-ten.vercel.app/",
+
+  githubUrl: "https://github.com/akajdid-mostafa/Piolec",
+
+  meta: {
+    role: "Full-Stack Development",
+    duration: "1 Month",
+    year: "2024",
+    type: "Corporate Website & CMS",
   },
+
+  facts: {
+    industry: "Electrical Engineering",
+    platform: "Web",
+    responsive: "Yes",
+    team: "Solo",
+  },
+
+  status: "Live Client Project",
+
+  story: [
+    {
+      title: "The Problem",
+
+      text: [
+        "Piolec needed more than a static company website. Its services cover electrical installations, automation, security systems, renewable energy, IT infrastructure, maintenance, and industrial projects — each requiring clear presentation supported by real technical work and project photography.",
+
+        "The company also needed to remain independent after delivery. Projects, articles, images, team access, and published content had to be managed internally without editing source code or relying on a developer for every update.",
+      ],
+
+      image: ProblemPiolec,
+
+      imageAlt:
+        "Piolec industrial services and project portfolio displayed across desktop and mobile",
+    },
+
+    {
+      title: "The Approach",
+
+      text: [
+        "I designed the product as two connected experiences: a responsive public website for customers and a dedicated administration dashboard for the Piolec team. The public side presents the company, its technical services, completed projects, work galleries, detailed project pages, and direct contact paths.",
+
+        "The dashboard acts as a custom content management system. Authorized team members can manage projects and blog posts, organize media assets, control publication states, manage users and roles, review activity, and update the public website through structured workflows.",
+      ],
+
+      image: ApproachPiolec,
+
+      imageAlt:
+        "Piolec custom administration dashboard for managing projects, articles, media, and users",
+    },
+
+    {
+      title: "The Outcome",
+
+      text: [
+        "The final platform gives Piolec a professional digital presence that reflects the scale and quality of its industrial work. Visitors can explore services, browse completed installations, view detailed project galleries, and contact the company through a clear and responsive interface.",
+
+        "Behind the public experience, the custom dashboard transforms the website into a maintainable business tool. Content can be created, updated, organized, and published without code changes, giving the client long-term control over its portfolio and company communication.",
+      ],
+
+      image: OutcomePiolec,
+
+      imageAlt:
+        "Published Piolec project detail page with technical information and field photography",
+    },
+  ],
+
+  technologies: [
+    "Next.js",
+    "JavaScript",
+    "Tailwind CSS",
+    "REST API",
+    "Custom CMS",
+    "Content Management",
+    "Project Management",
+    "Blog Management",
+    "Media Library",
+    "Role-Based Dashboard",
+    "Responsive Design",
+    "Vercel",
+  ],
+},
   {
     id: 4,
     slug: "monpatient",
