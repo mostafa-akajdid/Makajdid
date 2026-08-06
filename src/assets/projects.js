@@ -24,9 +24,17 @@ import HeroPiolec from "./Project/Piolec/HeroPiolec.webp";
 import ProblemPiolec  from "./Project/Piolec/ProblemPiolec.webp";
 import ApproachPiolec from "./Project/Piolec/ApproachPiolec.webp";
 import OutcomePiolec from "./Project/Piolec/OutcomePiolec.webp";
+import Heroglass from "./Project/glassocean/Heroglass.webp";
+import Problemglass  from "./Project/glassocean/Problemglass.webp";
+import Approachglass from "./Project/glassocean/Approachglass.webp";
+import Outcomeglass from "./Project/glassocean/Outcomeglass.webp";
 
 
-export {gemini,realstate,glassOcean,piolecImage,monpatient,StoryCareer,Herohala,Problemhala ,Approachhala,Outcomehala ,herostory,Problemstory,Approachstory,Outcomestory,herorealestat,Outcomerealestat,Approachrealestat,problemrealestat,Heromonpatient,Problemmonpatient,Approachmonpatient,Outcomemonpatient,HeroPiolec,ProblemPiolec,ApproachPiolec,OutcomePiolec}; 
+export {gemini,realstate,glassOcean,piolecImage,monpatient,StoryCareer,Herohala,Problemhala
+   ,Approachhala,Outcomehala ,herostory,Problemstory,Approachstory,Outcomestory,herorealestat,
+   Outcomerealestat,Approachrealestat,problemrealestat,Heromonpatient,Problemmonpatient,Approachmonpatient,
+   Outcomemonpatient,HeroPiolec,ProblemPiolec,ApproachPiolec,OutcomePiolec,
+  Heroglass,Problemglass,Approachglass,Outcomeglass}; 
 export const projectImages = {
     gemini,
     realstate,
@@ -53,5 +61,9 @@ export const projectImages = {
     HeroPiolec,
     ProblemPiolec,
     ApproachPiolec,
-    OutcomePiolec
+    OutcomePiolec,
+    Heroglass,
+    Problemglass,
+    Approachglass,
+    Outcomeglass,
   };

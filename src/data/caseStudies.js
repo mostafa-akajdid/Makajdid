@@ -24,7 +24,11 @@ import {
   HeroPiolec,
   ProblemPiolec,
   ApproachPiolec,
-  OutcomePiolec
+  OutcomePiolec,
+  Heroglass,
+  Problemglass,
+  Approachglass,
+  Outcomeglass,
 } from "../assets/projects";
 
 const caseStudies = [
@@ -98,65 +102,98 @@ const caseStudies = [
   },
   {
     id: 2,
-    slug: "glassocean",
-    title: "Glass Ocean",
+    slug: "ocean-glass",
+    title: "Ocean Glass",
+  
     subtitle:
-      "A landing page that demonstrates glassmorphism done right — transparent, layered, and alive.",
+      "A multilingual business platform that helps Ocean Glass showcase services, manage projects, and convert visitors into qualified leads.",
+  
     description:
-      "Landing page with glass morphism design and smooth responsive animations.",
-    image: glassOcean,
-    stack: ["Next.js", "Material-UI", "GSAP"],
-    liveUrl: null,
+      "Designed and developed a complete website for a professional glass services company, combining multilingual support, project galleries, quotation requests, and a modern responsive experience.",
+  
+    image: Heroglass,
+  
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Material UI",
+      "Firebase",
+      "i18next",
+      "GSAP"
+    ],
+  
+    liveUrl: "https://glass-ocean-five.vercel.app/en",
+  
     githubUrl: null,
+  
     meta: {
-      role: "Frontend Development",
-      duration: "3 Weeks",
-      year: "2024",
-      type: "Landing Page",
+      role: "Full Stack Developer",
+      duration: "4 Weeks",
+      year: "2025",
+      type: "Client Project",
     },
+  
     facts: {
-      industry: "Design Showcase",
+      industry: "Glass Services",
       platform: "Web",
-      responsive: "Yes",
+      responsive: "Desktop • Tablet • Mobile",
       team: "Solo",
     },
-    status: "Concept",
+  
+    status: "Completed",
+  
     story: [
       {
         title: "The Problem",
         text: [
-          "Glassmorphism is everywhere — but most implementations feel heavy. Blurred backgrounds that obscure content, low-contrast text, and effects that slow the page to a crawl. It's a trend that's easy to apply and hard to get right.",
-          "The goal was to prove that glassmorphism can feel premium without sacrificing readability or speed. Depth and transparency should enhance the experience, not decorate it.",
+          "Ocean Glass needed more than a company website. Their services were difficult to explain, completed projects lacked a structured gallery, and customers had no clear path to request quotations online.",
+  
+          "The challenge was to create a professional digital experience that builds trust, supports multiple languages, showcases completed work, and turns visitors into potential customers."
         ],
-        image: glassOcean,
-        imageAlt: "Glass Ocean landing page hero section",
+  
+        image: Problemglass,
+  
+        imageAlt: "Ocean Glass service page"
       },
+  
       {
         title: "The Approach",
         text: [
-          "The philosophy was restraint. Subtle blur, controlled opacity, and carefully layered depth. Every glass element was tuned for contrast against its background — readable at a glance, beautiful on closer inspection.",
-          "GSAP animations were used sparingly. Smooth entrances, gentle parallax on scroll, and micro-interactions that reward attention without demanding it. Nothing moves unless it has a reason to.",
+          "I designed and developed a modern multilingual platform using Next.js with English, French, and Arabic support, including proper RTL layouts for Arabic users.",
+  
+          "The website combines detailed service pages, project galleries, quotation requests, responsive design, and smooth interactions to create a complete customer journey from discovery to contact."
         ],
-        image: glassOcean,
-        imageAlt: "Glass Ocean showing layered glass elements",
+  
+        image: Approachglass,
+  
+        imageAlt: "Ocean Glass quotation and multilingual experience"
       },
+  
       {
         title: "The Outcome",
         text: [
-          "The result is a page that feels alive — depth, movement, and transparency working in concert without overwhelming the visitor. It demonstrates that glassmorphism, when applied with discipline, can be both beautiful and functional.",
-          "Performance was non-negotiable. The page loads smoothly with no layout shifts, and every animation runs at 60fps. A visual showcase that never asks the user to wait.",
+          "The final product provides Ocean Glass with a professional online presence that clearly communicates its services, showcases completed work, and simplifies customer inquiries.",
+  
+          "The project demonstrates the ability to build production-ready business applications focused on usability, responsiveness, multilingual accessibility, and real client needs."
         ],
-        image: glassOcean,
-        imageAlt: "Glass Ocean responsive design across devices",
-      },
+  
+        image: Outcomeglass,
+  
+        imageAlt: "Ocean Glass gallery and completed projects"
+      }
     ],
+  
     technologies: [
       "Next.js",
-      "Material-UI",
+      "TypeScript",
+      "Material UI",
+      "Firebase",
+      "i18next",
       "GSAP",
-      "CSS Custom Properties",
       "Responsive Design",
-    ],
+      "SEO",
+      "RTL Support"
+    ]
   },
   {
   id: 3,
